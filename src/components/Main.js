@@ -1,4 +1,9 @@
-import Main from "../img/home_img/main.png";
+
+import Slider1 from "../img/home_img/carousel1.jpg";
+import Slider2 from "../img/home_img/carousel2.jpg";
+import Slider3 from "../img/home_img/carousel3.jpg";
+import Slider4 from "../img/home_img/carousel4.jpg";
+import Slider5 from "../img/home_img/carousel5.jpg";
 import { Carousel } from "antd";
 
 export default function Top() {
@@ -11,21 +16,21 @@ export default function Top() {
     };
     return (
         <div>
-            <div className="main">
-                <img className="main-img" src={Main}></img>
-            </div>
             <Carousel autoplay>
                 <div>
-                    <h3 style={contentStyle}>1</h3>
+                    <img className="slider-img"src={Slider1}></img>
                 </div>
                 <div>
-                    <h3 style={contentStyle}>2</h3>
+                <img className="slider-img"src={Slider2}></img>
                 </div>
                 <div>
-                    <h3 style={contentStyle}>3</h3>
+                <img className="slider-img"src={Slider3}></img>
                 </div>
                 <div>
-                    <h3 style={contentStyle}>4</h3>
+                <img className="slider-img"src={Slider4}></img>
+                </div>
+                <div>
+                <img className="slider-img"src={Slider5}></img>
                 </div>
             </Carousel>
         </div>
