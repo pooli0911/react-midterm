@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
 import Top from "../components/Main"
+import Appcontent from "../components/Content"
 
 
 import { StoreContext } from "../store"
@@ -18,6 +19,7 @@ function Home(){
              </Header>
              <Content className="layout-content">
                  <Top/>
+                 <Appcontent/>
              </Content>
              <Footer className="layout-footer">
                 <AppFooter />
