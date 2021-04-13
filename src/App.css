@@ -130,6 +130,7 @@ body {
   position: absolute;
 }
 .header-text-item{
+  position: relative;
   font-family: 'FakePearl-Regular',sans-serif;
   text-align: right;
   margin-left:75px;
@@ -137,12 +138,21 @@ body {
   color:#46413A;
   transition: 0.15s;
 }
-.header-text-item:hover{
-  cursor: pointer;
-  color: #46413A;
-  border-bottom: 2px solid #46413A;
+.header-text-item:after{
+  content:'';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #46413a;
   transition: 0.15s;
-
+}
+.header-text-item:hover:after{
+  cursor: pointer;
+  width: 100%;
+}
+.header-text-item:hover{
+  color: #46413A;
 }
 /*top-content*/
 .slider-img{
@@ -162,16 +172,26 @@ body {
 }
 .more{
   color:#E0C595;
-  font-size:24px;
+  font-size:20px;
   position:absolute;
-  right:3%;
+  right:7%;
   margin-top:-40px;
 }
-.more:hover{
-  cursor: pointer;
-  color: #E0C595;
-  border-bottom: 2px solid #E0C595;
+.more:after{
+  content:'';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #e0c595;
   transition: 0.15s;
+}
+.more:hover{
+  color: #E0C595;
+}
+.more:hover:after{
+  cursor: pointer;
+  width: 100%;
 }
 .hot-issue-img{
   text-align:center;
@@ -229,7 +249,7 @@ body {
 }
 .footer-text-item{
   font-size: 18px;
-  color:#E0C595;
+  color:#FFE9CB;
   font-family: 'FakePearl-Regular',sans-serif;
 }
 .item2,
@@ -240,10 +260,7 @@ body {
 .footer-text-item:hover{
   cursor: pointer;
   color: #E0C595;
-  /* text-decoration: underline; */
-  border-bottom: 2px solid #E0C595;
   transition: 0.15s ease-out;
-
 }
 .copy-right{
   text-align:center;
