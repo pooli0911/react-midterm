@@ -218,6 +218,7 @@ body {
 }
 .circle:hover{
   cursor: pointer;
+  color: #a58957;
   border-radius: 50%;
   transition: 0.25s;
   transform: scale(0.9);
@@ -227,6 +228,14 @@ body {
   text-align: center;
   line-height: 90px;
   font-family: 'FakePearl-Regular',sans-serif;
+}
+.nav-item--active{
+  background-color: #a58957;
+  color: #ffe9cb;
+  transform: scale(0.9);
+}
+.nav-item--active:hover{
+  color: #ffe9cb;
 }
 .home-img-change{
   text-align:center;
