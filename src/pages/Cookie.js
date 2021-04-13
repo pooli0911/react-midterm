@@ -5,14 +5,10 @@ import AppFooter from "../components/Footer"
 import Top from "../components/Main"
 import Appcontent from "../components/Content"
 import Home_img from "../components/Home_img"
-import battle from "../json/home_img1.json"
-
-
-import { StoreContext } from "../store"
-
+import cookie from "../json/home_img4.json"
 
 const { Header, Content, Footer } = Layout;
-function Home(){
+function Cookie(){
     return(
         <Layout className="container main-layout">
             <Layout >
@@ -22,7 +18,7 @@ function Home(){
              <Content className="layout-content">
                  <Top/>
                  <Appcontent/>
-                 <Home_img home_img={battle}/>
+                 <Home_img home_img={cookie}/>
              </Content>
              <Footer className="layout-footer">
                 <AppFooter />
@@ -32,4 +28,4 @@ function Home(){
     );
 }
 
-export default Home;
+export default Cookie;

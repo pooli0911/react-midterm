@@ -7,12 +7,8 @@ import Appcontent from "../components/Content"
 import Home_img from "../components/Home_img"
 import battle from "../json/home_img1.json"
 
-
-import { StoreContext } from "../store"
-
-
 const { Header, Content, Footer } = Layout;
-function Home(){
+function Battle(){
     return(
         <Layout className="container main-layout">
             <Layout >
@@ -32,4 +28,4 @@ function Home(){
     );
 }
 
-export default Home;
+export default Battle;

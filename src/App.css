@@ -87,9 +87,10 @@ body {
   line-height: 1.6;
   background-color:#46413A;
 }
-
 .layout-content {
-  background-image: url("./img/background-image/storybgi.png");
+  background: url(./img/background-image/backcloud.png) center bottom no-repeat, url(./img/background-image/storybgi.png) center top no-repeat;
+  background-color: #1c1818;
+
 }
 
 .main-layout {
@@ -206,6 +207,7 @@ body {
   margin: 0 auto;
   width: 720px;
   justify-content: space-around;
+  margin-top:90px;
 }
 .circle{
   min-width: 90px;
@@ -225,6 +227,11 @@ body {
   text-align: center;
   line-height: 90px;
   font-family: 'FakePearl-Regular',sans-serif;
+}
+.home-img-change{
+  text-align:center;
+  margin-top:60px;
+  margin-bottom:60px;
 }
 
 
