@@ -218,6 +218,7 @@ body {
 }
 .circle:hover{
   cursor: pointer;
+  color: #a58957;
   border-radius: 50%;
   transition: 0.25s;
   transform: scale(0.9);
