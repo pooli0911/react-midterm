@@ -13,15 +13,15 @@ export default function NavItem(props){
    const { state, dispatch } = useContext(StoreContext);
    const getJSON = url => {
        switch(url){
-           case "/battle":
+           case "/home/battle":
                return battle;
-           case "/kingdom":
+           case "/home/kingdom":
                return kingdom;
-           case "/adventure":
+           case "/home/adventure":
                return adventure;
-           case "/cookie":
+           case "/home/cookie":
                return cookie;
-           case "/pvp":
+           case "/home/pvp":
                return pvp;
            default:
                return battle;

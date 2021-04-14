@@ -14,7 +14,7 @@ export default function Header(){
         </div>
         <div className="header-text">
             <Link to className="header-text-item">遊戲介紹</Link>
-            <Link to className="header-text-item">餅乾介紹</Link>
+            <Link to ="/cookie" className="header-text-item">餅乾介紹</Link>
             <Link to className="header-text-item">陣容預覽</Link>
         </div>
 
