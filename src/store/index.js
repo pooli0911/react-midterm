@@ -7,7 +7,7 @@ import battle from "../json/home_img1.json"
 
 export const StoreContext = createContext();
 const initialState = {
-   page: {
+   home_img: {
       battle,
    },
    navBar: {
@@ -20,7 +20,7 @@ function reducer(state, action){
    switch(action.type){
       case SET_HOME_IMAGE:
          return{
-            ...state, page:action.payload,
+            ...state, home_img:action.payload,
          };
       case SET_NAVBAR_ACTIVEITEM:
          return{

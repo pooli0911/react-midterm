@@ -5,7 +5,7 @@ import AppFooter from "../components/Footer"
 import Top from "../components/Main"
 import Appcontent from "../components/Content"
 import Home_img from "../components/Home_img"
-import battle from "../json/home_img1.json"
+
 
 
 import { StoreContext } from "../store"
@@ -13,6 +13,7 @@ import { StoreContext } from "../store"
 
 const { Header, Content, Footer } = Layout;
 function Home(){
+    const { state: { home_img } } = useContext(StoreContext);
     return(
         <Layout className="container main-layout">
             <Layout >
@@ -22,7 +23,7 @@ function Home(){
              <Content className="layout-content">
                  <Top/>
                  <Appcontent/>
-                 <Home_img home_img={battle}/>
+                 <Home_img home_img={home_img}/>
              </Content>
              <Footer className="layout-footer">
                 <AppFooter />

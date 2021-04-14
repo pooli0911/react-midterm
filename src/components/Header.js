@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../img/header/logo.png"
 
 
-export default function headerer(){
+export default function Header(){
     return(
 <div className="header">
     <header className="header-wrap">
