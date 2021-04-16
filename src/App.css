@@ -263,12 +263,12 @@ body {
   color: #a58957 ;
   border-radius: 15px;
   transition: 0.25s;
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 .cookie-nav-bar{
   display:flex;
   margin: 0 auto;
-  width: 1200px;
+  width: 80%;
   justify-content: space-around;
 }
 .cookie-nav-item{
@@ -278,6 +278,14 @@ body {
   text-align: center;
   font-family: 'FakePearl-Regular',sans-serif;
   transition: 0.25s;
+}
+.nav-item--active{
+  background-color: #a58957;
+  color: #ffe9cb;
+  /* transform: scale(0.9); */
+}
+.nav-item--active:hover{
+  color: #ffe9cb;
 }
 
 
@@ -336,9 +344,10 @@ body {
 /* cookie-detail */
 .cookie-flex{
   display: flex;
+  overflow: hidden;
 }
 .cookie-image{
-  height: 450px;
+  height: 80% ;
 	-webkit-animation: bounce-down 2.5s linear infinite;
 	animation: bounce-down 2.5s linear infinite;
   
@@ -347,12 +356,23 @@ body {
   margin-top: 8%;
   width: 100vw;
   display: flex;
+
 }
 .detail-box{
-  background-color: #785656;
+  margin-top: -10%;
+  background: rgba(224, 197, 149, 0.4);
+  padding: 40px;
+  border-radius: 20px;
   color: white;
-  width: 500px;
+  width: 110%;
   margin-left: 50%;
+  line-height: 32px;
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-weight: 100;
+}
+.detail-box h1{
+  color: white;
+  font-family: 'FakePearl-Regular',sans-serif;
 }
 @-webkit-keyframes bounce-down {
 	25% {
