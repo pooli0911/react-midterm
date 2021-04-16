@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Row, Col } from "antd";
 
-function CookieDetail({ cookies }) {
+function CookieDetail({ cookies,move }) {
+    
     return (
-        <div className="cookie-flex">
+        <div className="cookie-flex" style={move}>
             {cookies.map(cookie => (
                 <Row gutter={[32, 32]}>
                     <div className="ckies">

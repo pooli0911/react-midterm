@@ -15,7 +15,7 @@ import React, { useState, useEffect } from 'react';
 import { StoreContext } from "../store"
 
 
-
+let count = 0
 
 const { Header, Content, Footer } = Layout;
 function Cookie() {
@@ -27,6 +27,21 @@ function Cookie() {
             setLoading(false)
         }, 500)
     }, []);
+    const widthDif=document.getElementById(`${cookie}`)?.scrollWidth
+    const [moveStyle, setMoveStyle] = useState({
+        transform: "translate3d(0px, 0px, 0px)",
+    });
+
+    const onPrevClick = () => {
+        
+        setMoveStyle({ transform: "translate3d(0%, 0px, 0px)" });
+    };
+
+    const onNextClick = () => {
+        
+        console.log("MOVE TO TRUE")
+        setMoveStyle({ transform: `translate3d(-100%, 0px, 0px)` });
+    };
     return (
         <div className="loading">
             {loading ? <GifLoader
@@ -40,9 +55,9 @@ function Cookie() {
                     </Header>
                     <Content className="cookie-content">
                         <CookieNavBar />
-                        <CookieDetail cookies={cookie} />
-                        <img className="arrow left-arrow" src={left}></img>
-                        <img className="arrow right-arrow" src={right}></img>
+                        <CookieDetail cookies={cookie} move={moveStyle}/>
+                        <div onClick={onPrevClick}><img onClick={onPrevClick} className="arrow left-arrow" src={left}></img></div>
+                        <div onClick={onNextClick}><img onClick={onNextClick} className="arrow right-arrow" src={right}></img></div>
                     </Content>
                     <Footer className="layout-footer">
                         <AppFooter />
