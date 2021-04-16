@@ -368,11 +368,11 @@ body {
   margin-left: 50%;
   line-height: 32px;
   font-family: 'FakePearl-Regular',sans-serif;
-  font-weight: 100;
 }
 .detail-box h1{
   color: white;
   font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 28px;
 }
 @-webkit-keyframes bounce-down {
 	25% {
