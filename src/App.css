@@ -248,7 +248,8 @@ body {
 .cookie-content{
   background: url('./img/background-image/cookie-bg.png') center center no-repeat;
   background-size: cover;
-  
+  overflow: hidden;
+  width: 100vw;
 }
 .box{
   width:130px;
@@ -344,13 +345,14 @@ body {
 /* cookie-detail */
 .cookie-flex{
   display: flex;
-  overflow: hidden;
+  width: 100vw;
+  /* transform: translateX(-200%); */
+  transition-duration: 1s;
 }
 .cookie-image{
-  height: 80% ;
+  height: 75% ;
 	-webkit-animation: bounce-down 2.5s linear infinite;
 	animation: bounce-down 2.5s linear infinite;
-  
 }
 .ckies{
   margin-top: 8%;
@@ -365,10 +367,10 @@ body {
   border-radius: 20px;
   color: white;
   width: 110%;
-  margin-left: 50%;
+  margin-left: 60%;
   line-height: 32px;
   font-family: 'FakePearl-Regular',sans-serif;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 .detail-box h1{
   color: white;
@@ -399,4 +401,16 @@ body {
 	75% {
 		transform: translateY(10px);
 	}
+}
+.arrow{
+  width: 5%;
+  position: absolute;
+  margin-top: -35%;
+}
+.right-arrow{
+  right: 0;
+  margin-right: 3%;
+}
+.left-arrow{
+  margin-left: 3%;
 }
