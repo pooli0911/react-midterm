@@ -1,7 +1,8 @@
 import { createContext, useReducer } from "react";
 import useReducerWithThunk from 'use-reducer-thunk';
-import { SET_HOME_IMAGE, SET_NAVBAR_ACTIVEITEM } from "../utils/constants";
+import { SET_HOME_IMAGE, SET_NAVBAR_ACTIVEITEM,SET_COOKIE_IMAGE } from "../utils/constants";
 import battle from "../json/home_img1.json"
+import tank from "../json/tank.json"
 
 
 
@@ -13,6 +14,8 @@ const initialState = {
    navBar: {
       activeItem:"/"
    },
+   cookie: tank,
+   
 }
 
 function reducer(state, action){
@@ -26,8 +29,12 @@ function reducer(state, action){
          return{
             ...state,
             navBar:{
-               activeItem: action.payload
+               activeItem: action.payload,
             }
+         }
+      case SET_COOKIE_IMAGE:
+         return{
+            ...state,cookie:action.payload,
          }
       default:
          return state;
@@ -36,7 +43,7 @@ function reducer(state, action){
 
 
 export function StoreProvider(props) {
-    const [state, dispatch] = useReducerWithThunk(reducer, initialState, "example");
+    const [state, dispatch] = useReducer(reducer, initialState);
     const value = { state, dispatch };
  
     return (

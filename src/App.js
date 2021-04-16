@@ -10,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/home/:pageName" component={Home}/>
+          <Route path="/home/:pageName" component={Home}/>
           <Route path="/cookie" component={Cookie}/>
+          <Route path="/cookie/:cookieStyle" component={Cookie}/>
         </Switch>
       </BrowserRouter>
     </StoreProvider>
