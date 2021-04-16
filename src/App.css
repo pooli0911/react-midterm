@@ -332,3 +332,9 @@ body {
   font-size:12px;
   font-family: 'FakePearl-Regular',sans-serif;
 }
+
+/* cookie-detail */
+.cookie-image{
+  width: 450px;
+  
+}
