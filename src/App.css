@@ -334,7 +334,48 @@ body {
 }
 
 /* cookie-detail */
+.cookie-flex{
+  display: flex;
+}
 .cookie-image{
-  width: 450px;
+  height: 450px;
+	-webkit-animation: bounce-down 2.5s linear infinite;
+	animation: bounce-down 2.5s linear infinite;
   
+}
+.ckies{
+  margin-top: 8%;
+  width: 100vw;
+  display: flex;
+}
+.detail-box{
+  background-color: #785656;
+  color: white;
+  width: 500px;
+  margin-left: 50%;
+}
+@-webkit-keyframes bounce-down {
+	25% {
+		-webkit-transform: translateY(-10px);
+	}
+	50%,
+	100% {
+		-webkit-transform: translateY(0);
+	}
+	75% {
+		-webkit-transform: translateY(10px);
+	}
+}
+
+@keyframes bounce-down {
+	25% {
+		transform: translateY(-10px);
+	}
+	50%,
+	100% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(10px);
+	}
 }
