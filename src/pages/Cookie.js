@@ -9,7 +9,7 @@ import right from "../img/otherimg/rightarrow.png"
 import Loader from "../components/loader"
 import GifLoader from "react-gif-loader";
 import React, { useState, useEffect } from 'react';
-
+import SSwiper from "../components/swiper"
 
 
 import { StoreContext } from "../store"
@@ -18,6 +18,8 @@ import { StoreContext } from "../store"
 let count = 0
 
 const { Header, Content, Footer } = Layout;
+var clicks = 0;
+
 function Cookie() {
     const { state: { cookie } } = useContext(StoreContext);
     const [loading, setLoading] = useState(false);
@@ -27,20 +29,19 @@ function Cookie() {
             setLoading(false)
         }, 500)
     }, []);
-    const widthDif=document.getElementById(`${cookie}`)?.scrollWidth
+    const widthDif = document.getElementById(`${cookie}`)?.scrollWidth
     const [moveStyle, setMoveStyle] = useState({
         transform: "translate3d(0px, 0px, 0px)",
     });
 
     const onPrevClick = () => {
-        
+
         setMoveStyle({ transform: "translate3d(0%, 0px, 0px)" });
     };
 
     const onNextClick = () => {
-        
         console.log("MOVE TO TRUE")
-        setMoveStyle({ transform: `translate3d(-100%, 0px, 0px)` });
+        setMoveStyle({ transform: `translate3d(-100%, 0px, 0px)` })
     };
     return (
         <div className="loading">
@@ -55,9 +56,10 @@ function Cookie() {
                     </Header>
                     <Content className="cookie-content">
                         <CookieNavBar />
-                        <CookieDetail cookies={cookie} move={moveStyle}/>
-                        <div onClick={onPrevClick}><img onClick={onPrevClick} className="arrow left-arrow" src={left}></img></div>
-                        <div onClick={onNextClick}><img onClick={onNextClick} className="arrow right-arrow" src={right}></img></div>
+                        <SSwiper cookies={cookie} />
+                        {/* <CookieDetail cookies={cookie} move={moveStyle} /> */}
+                        {/* <div onClick={onPrevClick} onClick="clicks++;check();"><img onClick={onPrevClick} className="arrow left-arrow" src={left}></img></div>
+                        <div onClick={onNextClick} onClick="clicks++;check();"><img onClick={onNextClick} className="arrow right-arrow" src={right}></img></div> */}
                     </Content>
                     <Footer className="layout-footer">
                         <AppFooter />

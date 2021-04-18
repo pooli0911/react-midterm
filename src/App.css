@@ -4,6 +4,7 @@
   src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2")
   , url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
 }
+/* @import 'react-id-swiper/lib/styles/css/swiper.css'; */
 /* RWD Container */
 
 .container {
@@ -344,7 +345,8 @@ body {
 
 /* cookie-detail */
 .cookie-flex{
-  display: flex;
+  /* display: flex; */
+  /* overflow: hidden; */
   width: 100vw;
   /* transform: translateX(-200%); */
   transition-duration: 1s;
@@ -413,4 +415,14 @@ body {
 }
 .left-arrow{
   margin-left: 3%;
+}
+.swiper-container{
+  width: 100vw;
+}
+.swiper-wrapper{
+ padding-inline-start:0; 
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+  flex-direction: row;
 }
