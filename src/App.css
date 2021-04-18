@@ -345,14 +345,15 @@ body {
 
 /* cookie-detail */
 .cookie-flex{
-  /* display: flex; */
+  display: flex;
   /* overflow: hidden; */
   width: 100vw;
   /* transform: translateX(-200%); */
   transition-duration: 1s;
 }
 .cookie-image{
-  height: 75% ;
+  height: 90% ;
+  margin-top: -50px;
 	-webkit-animation: bounce-down 2.5s linear infinite;
 	animation: bounce-down 2.5s linear infinite;
 }
@@ -425,4 +426,88 @@ body {
 
 .swiper-container-vertical > .swiper-wrapper {
   flex-direction: row;
+}
+
+/* button */
+.btn-tocar{
+  width: 178px;
+  height: 73px;
+  border-radius: 15px;
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-weight: bold;
+  background-color: #e0c595;
+  color: #46413a;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+  margin-left: 7rem;
+  bottom: 5%;
+}
+.btn-tocar:hover{
+  background-color: #a58957;
+  color: #ffe9cb;
+}
+/* Lineup */
+.lineuptitle{
+  color: #e0c595;
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 48px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-top: 3%;
+}
+.checkout{
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  width: 350px;
+  background-color: rgba(70, 65, 58, 0.6);
+  font-family: 'FakePearl-Regular',sans-serif;
+  letter-spacing: 0.1em;
+  color: #ffe9cb;
+}
+.cooline{
+  display: flex;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.cooline li{
+  list-style: none;
+  text-align: center;
+}
+.cart-item{
+  background-image: url(./img/background-image/line-up-cookie-bg.png) ;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.cart-image{
+  width: 300px;
+  text-align: center;
+}
+.cart-image img{
+  /* width: 100%; */
+  height: 250px;
+  text-align: center;
+
+}
+.cart-name{
+  color: #46413a;
+  text-align: center;
+  font-family: 'FakePearl-Regular',sans-serif;
+  margin-top: 50px;
+}
+.cart-item-end{
+  background-color: #e0c595;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.15s;
+
+}
+.cart-item-end:hover{
+  background-color: #a58957;
+  color: #e0c595;
+  transition: 0.15s;
 }

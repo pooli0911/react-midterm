@@ -5,11 +5,13 @@ import Cookiedetail from "../components/CookieDetail"
 
 export default function sswiper({ cookies }) {
     const slides = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 7; i++) {
         slides.push(
             <div>
                 <SwiperSlide>
-                    <div><Cookiedetail cookies={cookies} /></div>
+                    <div>
+                        <Cookiedetail cookie={cookies[i]} />
+                    </div>
                 </SwiperSlide>
             </div>
         )
@@ -23,7 +25,7 @@ export default function sswiper({ cookies }) {
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                // onSwiper={(swiper) => console.log(swiper)}
+                onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
             >
                 {slides}

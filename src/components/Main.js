@@ -36,19 +36,6 @@ export default function Top() {
                     <img className="slider-img" src={Slider5}></img>
                 </div>
             </Carousel>
-            <Swiper
-                navigation
-                spaceBetween={50}
-                slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-            >
-                <SwiperSlide><img className="slider-img" src={Slider1}></img></SwiperSlide>
-                <SwiperSlide><img className="slider-img" src={Slider2}></img></SwiperSlide>
-                <SwiperSlide><img className="slider-img" src={Slider3}></img></SwiperSlide>
-                <SwiperSlide><img className="slider-img" src={Slider4}></img></SwiperSlide>
-      ...
-            </Swiper>
         </div>
     );
 }
