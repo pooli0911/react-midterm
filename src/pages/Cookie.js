@@ -10,7 +10,7 @@ import Loader from "../components/loader"
 import GifLoader from "react-gif-loader";
 import React, { useState, useEffect } from 'react';
 import SSwiper from "../components/swiper"
-
+import HamMenu from "../components/hammenu"
 
 import { StoreContext } from "../store"
 
@@ -22,6 +22,7 @@ var clicks = 0;
 
 function Cookie() {
     const { state: { cookie } } = useContext(StoreContext);
+    const [isOnTouch, setIsOnTouch] = useState(false);
     const [loading, setLoading] = useState(false);
     useEffect(() => {
         setLoading(true)
@@ -51,8 +52,12 @@ function Cookie() {
                 loading={loading}
             /> : <Layout className="container main-layout">
                 <Layout >
+                    <HamMenu
+                        onClick={() => setIsOnTouch(!isOnTouch)}
+                        isOnTouch={isOnTouch}
+                    />
                     <Header className="layout-header">
-                        <AppHeader />
+                        <AppHeader isOnTouch={isOnTouch} />
                     </Header>
                     <Content className="cookie-content">
                         <CookieNavBar />

@@ -7,6 +7,7 @@ import Appcontent from "../components/Content"
 import Home_img from "../components/Home_img"
 import GifLoader from "react-gif-loader";
 import React, { useState, useEffect } from 'react';
+import HamMenu from "../components/hammenu"
 
 
 import { StoreContext } from "../store"
@@ -16,7 +17,7 @@ const { Header, Content, Footer } = Layout;
 function Home() {
     const { state: { home_img } } = useContext(StoreContext);
     const [loading, setLoading] = useState(false);
-
+    const [isOnTouch, setIsOnTouch] = useState(true);
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -31,8 +32,12 @@ function Home() {
                 loading={loading}
             /> : <Layout className="container main-layout">
                 <Layout >
+                    <HamMenu
+                        onClick={() => setIsOnTouch(!isOnTouch)}
+                        isOnTouch={isOnTouch}
+                    />
                     <Header className="layout-header">
-                        <AppHeader />
+                        <AppHeader isOnTouch={isOnTouch} />
                     </Header>
                     <Content className="layout-content">
                         <Top />

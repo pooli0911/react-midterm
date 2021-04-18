@@ -5,6 +5,7 @@ import AppFooter from "../components/Footer"
 import CheckOut from "../components/CheackOut"
 import GifLoader from "react-gif-loader";
 import React, { useState, useEffect } from 'react';
+import HamMenu from "../components/hammenu"
 
 
 import { StoreContext } from "../store"
@@ -14,7 +15,7 @@ const { Header, Content, Footer } = Layout;
 function Team() {
     const { state: { home_img } } = useContext(StoreContext);
     const [loading, setLoading] = useState(false);
-
+    const [isOnTouch, setIsOnTouch] = useState(true);
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -29,8 +30,12 @@ function Team() {
                 loading={loading}
             /> : <Layout className="container main-layout">
                 <Layout >
+                    <HamMenu
+                        onClick={() => setIsOnTouch(!isOnTouch)}
+                        isOnTouch={isOnTouch}
+                    />
                     <Header className="layout-header">
-                        <AppHeader />
+                        <AppHeader isOnTouch={isOnTouch} />
                     </Header>
                     <Content className="layout-content">
                         <div className="lineuptitle">陣容預覽</div>

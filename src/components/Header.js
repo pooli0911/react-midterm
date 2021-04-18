@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { BackTop } from 'antd';
 import { Link } from "react-router-dom";
 import Logo from "../img/header/logo.png"
+import NavItem from "./NavItem"
+import HeaderNavBar from "./HeaderNavBar"
 
 
-
-export default function Header() {
+export default function Header({ isOnTouch }) {
     return (
         <div>
             <div className="header">
@@ -15,12 +16,7 @@ export default function Header() {
                             <img className="img-logo" src={Logo}></img>
                         </Link>
                     </div>
-                    <div className="header-text">
-                        <Link to className="header-text-item">遊戲介紹</Link>
-                        <Link to="/cookie" className="header-text-item">餅乾介紹</Link>
-                        <Link to="/team" className="header-text-item">陣容預覽</Link>
-                    </div>
-
+                    <HeaderNavBar isOnTouch={isOnTouch} />
                 </header>
                 <BackTop />
             </div>
