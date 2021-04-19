@@ -216,7 +216,7 @@ body {
 }
 @media (max-width: 750px){
   .hot-issue-img{
-    width: 375px;
+    width: 50%;
     margin: 0 auto;
   }
   .issue-img{
@@ -250,10 +250,25 @@ body {
     width: 100%;
   }
 }
+
 .nav-bar{
   display:flex;
   margin: 0 auto;
   width: 720px;
+  justify-content: space-around;
+  margin-top:-20px;
+}
+.first{
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  justify-content: space-around;
+  margin-top:90px;
+}
+.second{
+  display:flex;
+  margin: 0 auto;
+  width: 40%;
   justify-content: space-around;
   margin-top:90px;
 }
@@ -682,5 +697,69 @@ body {
   }
   .collapse-mobile-wrap{
     display: none;
+  }
+}
+
+/* RWD */
+@media (max-width: 500px){
+  .nav-bar{
+    display: block !important;
+    margin: 0 auto;
+    width: 300px;
+    margin-top:90px;
+  }
+  .first{
+    margin: 0 auto;
+    width: 300px;
+    justify-content: space-around;
+    margin-top:90px;
+  }
+  .second{
+    margin: 0 auto;
+    width: 200px;
+    justify-content: space-around;
+    margin-top:20px;
+  }
+  .hot-issue-img{
+    width: 25%;
+    margin: 0 auto;
+    margin-right: 65%;
+  }
+  .issue-img{
+    padding-top: 20px;
+  }
+  .second-icon-wrap{
+    width: 300px;
+    margin: 0 auto;
+  }
+  .img-google{
+    /* margin: 0 auto; */
+    text-align: center;
+  }
+  .img-apple{
+    /* margin: 0 auto; */
+    margin-left: 5px;
+  }
+  .footer-text{    
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  .item1{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .item2{
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .item3{
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
