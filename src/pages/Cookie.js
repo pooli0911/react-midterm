@@ -28,7 +28,7 @@ function Cookie() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 500)
+        }, 800)
     }, []);
     const widthDif = document.getElementById(`${cookie}`)?.scrollWidth
     const [moveStyle, setMoveStyle] = useState({

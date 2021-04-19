@@ -21,7 +21,7 @@ function Number() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 500)
+        }, 800)
     }, []);
     return (
         <div className="loading">
