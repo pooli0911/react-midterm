@@ -9,6 +9,7 @@ export const addToTeamItem = (dispatch, cookie, count) => {
         name: cookie.name,
         image: cookie.image,
         style: cookie.style,
+        atk: cookie.atk,
     };
     dispatch({
         type: ADD_TEAM_ITEM,

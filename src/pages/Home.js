@@ -17,7 +17,7 @@ const { Header, Content, Footer } = Layout;
 function Home() {
     const { state: { home_img } } = useContext(StoreContext);
     const [loading, setLoading] = useState(false);
-    const [isOnTouch, setIsOnTouch] = useState(true);
+    const [isOnTouch, setIsOnTouch] = useState(false);
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {

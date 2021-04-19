@@ -16,7 +16,11 @@ export const StoreContext = createContext();
 let teamItems = localStorage.getItem("teamItems")
    ? JSON.parse(localStorage.getItem("teamItems"))
    : [];
-let count = 0;
+
+// let count = 0;
+let count = localStorage.getItem("count")
+   ? JSON.parse(localStorage.getItem("count"))
+   : 0;
 const initialState = {
    home_img: battle,
    navBar: {

@@ -37,7 +37,6 @@ function CookieDetail({ cookie }) {
                     </Col>
                 </div>
             </Row>
-            ))
         </div>
 
     );

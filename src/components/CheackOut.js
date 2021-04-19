@@ -12,11 +12,28 @@ export default function CheckOut() {
     useEffect(() => {
         localStorage.setItem("teamItems", JSON.stringify(teamItems));
     }, [teamItems])
-    const getTotalPrice = () => {
-        return teamItems.length > 0
+    const getTotalAtk = () => {
+        return (teamItems.length > 0)
             ? teamItems.reduce((sum, item) => sum + item.atk, 5)
             : 0;
     };
+    const pingfeng = (getTotalAtk) => {
+        if (getTotalAtk >= 90000) {
+            return "SS"
+        }
+        else if (getTotalAtk >= 70000 && getTotalAtk < 90000) {
+            return "S"
+        }
+        else if (getTotalAtk >= 50000 && getTotalAtk < 70000) {
+            return "A"
+        }
+        else if (getTotalAtk >= 30000 && getTotalAtk < 50000) {
+            return "B"
+        }
+        else {
+            return "C"
+        }
+    }
 
     return (
         <div>
@@ -41,8 +58,8 @@ export default function CheckOut() {
 
                     ))}</div>
                 <div className="cart-total-atk-wrap">
-                    Total
-                        <div className="cart-total-atk">{getTotalPrice()}</div>
+                    <div className="cart-total-atk">總戰力：{getTotalAtk()}</div>
+                    <div className="cart-total-comment">{pingfeng(getTotalAtk())}級評分</div>
                 </div>
             </div>
 
