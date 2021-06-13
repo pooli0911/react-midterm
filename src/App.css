@@ -628,13 +628,14 @@ body {
 }
 
 .login-form{
-  width:45%;
+  width:30%;
   margin:auto;
+  
 }
 .logIn-headtext{
   font-size: 48px;
-  margin-left:39%;
-  margin-top:75%;
+  margin-left:33%;
+  margin-top:110%;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
 }
@@ -696,6 +697,11 @@ body {
 .ant-checkbox-inner{
   background-color:#2b2017 !important ;
 }
+.login-form__error-title,
+.login-form__error-message{
+  color:#ffa29c;
+
+}
 
 
 /* register */
@@ -709,7 +715,7 @@ body {
 }
 .register-headtext{
   font-size: 48px;
-  margin-left:21%;
+  margin-left:23%;
   margin-top:75%;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
@@ -1221,7 +1227,7 @@ body {
 .nummain{
   width: 50%;
   border-radius: 25px;
-  background-color: #ffe9cb;
+  background-color: #e0c595;
   margin: 0 auto;
   margin-top: 5%;
   padding: 3%;
@@ -1239,7 +1245,7 @@ body {
   border-radius: 15px;
   font-family: 'FakePearl-Regular',sans-serif;
   font-weight: bold;
-  background-color: #e0c595;
+  background-color: #ffe9cb;
   color: #46413a;
   letter-spacing: 0.2em;
   font-size: 24px;
