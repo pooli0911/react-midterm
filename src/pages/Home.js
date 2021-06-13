@@ -5,6 +5,7 @@ import AppFooter from "../components/Footer"
 import Top from "../components/Main"
 import Appcontent from "../components/Content"
 import Home_img from "../components/Home_img"
+import Feeder from "../components/Feeder";
 import GifLoader from "react-gif-loader";
 import React, { useState, useEffect } from 'react';
 import HamMenu from "../components/hammenu"
@@ -43,6 +44,7 @@ function Home() {
                         <Top />
                         <Appcontent />
                         <Home_img home_img={home_img} />
+                        <Feeder/>
                     </Content>
                     <Footer className="layout-footer">
                         <AppFooter />

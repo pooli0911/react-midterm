@@ -15,6 +15,7 @@ import healCookie from "../json/heal.json"
 import magicCookie from "../json/magic.json"
 import supCookie from "../json/support.json"
 import tankCookie from "../json/tank.json"
+import { setPage } from "../actions"
 
 export default function NavItem(props){
    const { children, to, className, activeClassName } = props

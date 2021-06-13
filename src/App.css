@@ -126,19 +126,33 @@ body {
   margin-left:70%;
 }
 .header-text {
+  display:flex;
   flex-wrap: nowrap;
-  right: 7%;
+  right: 5%;
   position: absolute;
 }
 .header-text-item{
   position: relative;
+  height:60px;
   font-family: 'FakePearl-Regular',sans-serif;
   text-align: right;
   margin-left:45px;
   font-size: 24px;
   color:#46413A;
   transition: 0.15s;
+  cursor: pointer;
 }
+.header-cart-summary{
+  font-family: 'FakePearl-Regular',sans-serif;
+  cursor: pointer;
+  margin-left:45px;
+  margin-top:6px;
+}
+/* .cart-summary-text{
+  font-family: 'FakePearl-Regular',sans-serif;
+  cursor: pointer;
+} */
+
 .header-text-item:after{
   content:'';
   position: absolute;
@@ -604,6 +618,156 @@ body {
   color: #e0c595;
   transition: 0.15s;
 }
+
+/* login */
+.login-backgrund{
+  background: url(./img/background-image/loginbg.png) center center no-repeat;
+  background-color:#2b2017 ;
+  width:100%;
+  height:1800px;
+}
+
+.login-form{
+  width:45%;
+  margin:auto;
+}
+.logIn-headtext{
+  font-size: 48px;
+  margin-left:39%;
+  margin-top:75%;
+  font-family: 'FakePearl-Regular',sans-serif;
+  color: #FFE9CB;
+}
+.logIn-account{
+  color:#FFE9CB;
+  font-size: 24px;
+  font-family: 'FakePearl-Regular',sans-serif;
+
+}
+
+.login-form__button{
+  width: 178px;
+  height: 73px;
+  border-radius: 15px;
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-weight: bold;
+  background-color:  #2b2017;
+  color: #FFE9CB;
+  letter-spacing: 0.2em;
+  font-size: 24px;
+  margin-left: 39%;
+  margin-bottom: 5%;
+}
+.login-form__button:hover{
+  background-color: #a58957;
+  color: #ffe9cb;
+}
+.remember{
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 24px;
+  color:#FFE9CB;
+}
+.account-flex{
+  display:flex;
+}
+.accountText{
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 16px;
+  color:#FFE9CB;
+
+}
+.ant-input-affix-wrapper{
+  background-color:#FFE9CB !important;
+}
+.ant-input{
+  
+  background-color:#FFE9CB !important;
+}
+.account-link{
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 16px;
+  color:#FFE9CB;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.account-link:hover{
+  color:#a58957;
+}
+.ant-checkbox-inner{
+  background-color:#2b2017 !important ;
+}
+
+
+/* register */
+.register-form{
+  width:45%;
+  margin:auto;
+  margin-left:35%;
+}
+.create{
+  width:500px;
+}
+.register-headtext{
+  font-size: 48px;
+  margin-left:21%;
+  margin-top:75%;
+  font-family: 'FakePearl-Regular',sans-serif;
+  color: #FFE9CB;
+}
+.register-text{
+  color:#FFE9CB;
+  font-size: 24px;
+  font-family: 'FakePearl-Regular',sans-serif;
+
+}
+.agreement{
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 24px;
+  color:#FFE9CB;
+}
+.register{
+  margin-left:22%;
+}
+
+
+
+/* profile */
+.profile-icon{
+  margin:auto;
+  margin-top:65%;
+
+}
+.cart-summary-profileText{
+  font-size: 48px;
+  margin-left:1%;
+  font-family: 'FakePearl-Regular',sans-serif;
+  color: #FFE9CB;
+}
+.profile-text{
+  font-size: 48px;
+  margin:auto;
+  font-family: 'FakePearl-Regular',sans-serif;
+  color: #FFE9CB;
+  text-align: center;
+
+}
+.profile-cart-summary{
+  text-align: center;
+}
+.change-password-link{
+  font-family: 'FakePearl-Regular',sans-serif;
+  font-size: 16px;
+  color:#FFE9CB;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.change-password-link:hover{
+  color:#a58957;
+}
+
+
+
+
 
 /* header */
 @media (max-width: 768px){
