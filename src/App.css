@@ -604,21 +604,41 @@ body {
   font-size: 24px;
 }
 .cart-item-end{
-  background-color: #e0c595;
-  border-radius: 50%;
-  width: 30px;
+  /* background-color: #e0c595; */
+  /* display: flex; */
+  color: #e0c595;
+  font-size: 18px;
+  text-align: center;
+  /* border-radius: 50%; */
+  width: 150px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: 45px;
   cursor: pointer;
   transition: 0.15s;
-
+  padding-left: -50px;
+}
+.orderlist{
+  display: flex;
 }
 .cart-item-end:hover{
-  background-color: #a58957;
-  color: #e0c595;
+  /* background-color: #a58957; */
+  color: #ffa29c;
   transition: 0.15s;
 }
-
+.cart-item-delete{
+  margin-left: 25%;
+}
+.order{
+  width: 400px;
+  margin-left: 15px;
+  margin-top: 10%;
+  background-color: #ffe9cb !important;
+}
+.order:hover{
+  font-weight: bold;
+  color: #2b2017;
+}
 /* login */
 .login-backgrund{
   background: url(./img/background-image/loginbg.png) center center no-repeat;
