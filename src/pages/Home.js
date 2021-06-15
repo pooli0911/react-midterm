@@ -44,7 +44,7 @@ function Home() {
                         <Top />
                         <Appcontent />
                         <Home_img home_img={home_img} />
-                        <Feeder/>
+                        
                     </Content>
                     <Footer className="layout-footer">
                         <AppFooter />
