@@ -1,15 +1,15 @@
-import React, { useContext,useState } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Input, Button } from "antd";
-import { logoutFromFirebase, updateUserInfo,storeOrderId,storeOrderItem } from "../actions";
+import { logoutFromFirebase, updateUserInfo, storeOrderId, storeOrderItem } from "../actions";
 import { StoreContext } from "../store";
-import {getOrderByUser} from "../api";
+import { getOrderByUser } from "../api";
 const ProfileCard = () => {
   const {
     state: {
       userSignin: { userInfo },
     },
-    
+
     dispatch,
   } = useContext(StoreContext);
   const { displayName, email } = userInfo;
@@ -21,8 +21,8 @@ const ProfileCard = () => {
     updateUserInfo(dispatch, values);
   };
 
-  
-  
+
+
   return (
     <Form
       onFinish={handleUpdate}
@@ -41,7 +41,7 @@ const ProfileCard = () => {
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
-              if (!value || getFieldValue({userInfo}) === value) {
+              if (!value || getFieldValue({ userInfo }) === value) {
                 return Promise.resolve();
               }
 
@@ -54,7 +54,7 @@ const ProfileCard = () => {
       >
         <Input.Password placeholder="confirm-password" />
       </Form.Item>
-      
+
       <p className="register-text">請輸入新的密碼:</p>
       <Form.Item
         name="password"
@@ -99,10 +99,10 @@ const ProfileCard = () => {
           htmlType="submit"
           className="login-form__button"
         >
-          Submit
+          確認更改
         </Button>
 
-        
+
       </Form.Item>
     </Form>
   );
