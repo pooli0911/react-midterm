@@ -95,7 +95,7 @@ const ProfileCard = () => {
 
               <div className="orderlist">
                 <Button className="order" onClick={() => clickorderid(id)}>Number:{id}</Button>
-                <div className="cart-item-end">
+                <div className="cart-item-del">
                   <div className="cart-item-delete" onClick={() => removeOrder(id)}>
                     刪除隊伍
                   </div>
