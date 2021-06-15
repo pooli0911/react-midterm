@@ -643,9 +643,10 @@ body {
   color:#FFE9CB;
   font-size: 24px;
   font-family: 'FakePearl-Regular',sans-serif;
-
 }
-
+.button-pos{
+  margin: auto;
+}
 .login-form__button{
   width: 178px;
   height: 73px;
@@ -656,7 +657,8 @@ body {
   color: #FFE9CB;
   letter-spacing: 0.2em;
   font-size: 24px;
-  margin-left: 39%;
+  margin-left: 33%;
+  margin-top: 20%;
   margin-bottom: 5%;
 }
 .login-form__button:hover{
@@ -675,16 +677,17 @@ body {
   font-family: 'FakePearl-Regular',sans-serif;
   font-size: 16px;
   color:#FFE9CB;
-
 }
 .ant-input-affix-wrapper{
   background-color:#FFE9CB !important;
+  opacity: 0.8 !important;
 }
 .ant-input{
-  
   background-color:#FFE9CB !important;
 }
 .account-link{
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: 'FakePearl-Regular',sans-serif;
   font-size: 16px;
   color:#FFE9CB;
@@ -744,18 +747,21 @@ body {
 
 }
 .cart-summary-profileText{
-  font-size: 48px;
-  margin-left:1%;
+  font-size: 24px;
+  margin-left: 5%;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .profile-text{
-  font-size: 48px;
+  font-size: 24px;
   margin:auto;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
-  text-align: center;
-
+  margin-top: -10px;
+  margin-left: 5%;
+  margin-bottom: 10px;
 }
 .profile-cart-summary{
   text-align: center;
@@ -764,6 +770,7 @@ body {
   font-family: 'FakePearl-Regular',sans-serif;
   font-size: 16px;
   color:#FFE9CB;
+  margin-left: 5%;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }

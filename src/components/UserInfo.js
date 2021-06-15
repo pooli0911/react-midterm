@@ -1,12 +1,12 @@
 import { useEffect, useContext } from "react";
-import { UserOutlined, UserSwitchOutlined,TeamOutlined } from '@ant-design/icons';
+import { UserOutlined, UserSwitchOutlined, TeamOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
 
 import { StoreContext } from "../store"
 
 export default function UserInfo(props) {
 
-   const { state: { userSignin : { userInfo } } } = useContext(StoreContext);
+   const { state: { userSignin: { userInfo } } } = useContext(StoreContext);
    const history = useHistory();
 
    const goToProfile = () => {
@@ -21,7 +21,7 @@ export default function UserInfo(props) {
       <>
          <nav onClick={goToProfile} style={{ ...props.style }} className="header-cart-summary" >
             {userInfo
-               ? <TeamOutlined style={{ fontSize: '35px', color: '#46413A'}}/>
+               ? <TeamOutlined style={{ fontSize: '35px', color: '#46413A' }} />
                : <UserSwitchOutlined style={{ fontSize: '35px', color: '#46413A' }} />
 
             }

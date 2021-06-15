@@ -6,21 +6,21 @@ import { loginToFirebase } from '../actions'
 import { StoreContext } from "../store"
 
 const LoginCard = ({ redirect }) => {
-  const { state:{ userSignin: { userInfo, loading, error } }, dispatch } = useContext(StoreContext);
+  const { state: { userSignin: { userInfo, loading, error } }, dispatch } = useContext(StoreContext);
   const [form] = Form.useForm();
   const history = useHistory();
- 
+
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     await loginToFirebase(dispatch, values);
   };
 
   useEffect(() => {
-    if(userInfo) history.push(redirect);
-  }, [ userInfo ]);// eslint-disable-line react-hooks/exhaustive-deps
+    if (userInfo) history.push(redirect);
+  }, [userInfo]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    
+
     <Form
       name="normal_login"
       className="login-form"
@@ -33,9 +33,9 @@ const LoginCard = ({ redirect }) => {
       <h1 className="logIn-headtext">帳號登入</h1>
       <p className="logIn-account">電子郵件帳號</p>
       <Form.Item
-      
+
         name="email"
-        style={{ color: "red" }}
+        style={{ color: "#ffa29c" }}
         rules={[
           {
             type: "email",
@@ -49,7 +49,7 @@ const LoginCard = ({ redirect }) => {
         hasFeedback
       >
         <Input
-          
+
           prefix={<MailOutlined className="site-form-item-icon" />}
           placeholder="E-Mail"
         />
@@ -77,22 +77,23 @@ const LoginCard = ({ redirect }) => {
         </Form.Item>
       </Form.Item>
       <Form.Item>
+        <Link to={"/register?redirect=profile"} className="account-link">忘記密碼</Link>
         <div className="account-flex">
-          <p className="accountText">還沒有帳號?</p>
-          <Link to={"/register?redirect=profile"}className="account-link">點擊註冊!</Link>
+          {/* <p className="accountText">還沒有帳號？</p> */}
+          <Link to={"/register?redirect=profile"} className="account-link">還沒有帳號？點擊註冊！</Link>
         </div>
-      
-          {error === "" ? (
-            <></>
-          ) : (
-            <div className="login-form__error-wrap">
-              <h3 className="login-form__error-title">
-                <WarningOutlined className="site-form-item-icon" />
-                {"  "}There was a problem
-              </h3>
-              <p className="login-form__error-message">{error}</p>
-            </div>
-          )}
+
+        {error === "" ? (
+          <></>
+        ) : (
+          <div className="login-form__error-wrap">
+            <h3 className="login-form__error-title">
+              <WarningOutlined className="site-form-item-icon" />
+              {"  "}There was a problem
+            </h3>
+            <p className="login-form__error-message">{error}</p>
+          </div>
+        )}
       </Form.Item>
 
       <Form.Item>
@@ -114,7 +115,7 @@ const LoginCard = ({ redirect }) => {
             登入
           </Button>
         )}
-        
+
       </Form.Item>
     </Form>
   );
