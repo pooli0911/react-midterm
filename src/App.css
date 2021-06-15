@@ -1069,6 +1069,13 @@ body {
   .cart-total-atk-wrap{
     width: 50%;
   }
+  .dropmenu{
+    margin-left: 38%;
+  }
+  .primary-btn{
+    margin-top: 3%;
+    margin-left: 39%;
+  }
 }
 
 /* RWD */
@@ -1292,6 +1299,12 @@ body {
   .cart-total-atk-wrap{
     width: 70%;
     font-size: 24px;
+  }
+  .dropmenu{
+    margin-left: 24%;
+  }
+  .primary-btn{
+    margin-left: 27%;
   }
 }
 /* Number */
