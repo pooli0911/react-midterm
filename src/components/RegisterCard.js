@@ -62,6 +62,7 @@ const RegisterCard = ({ redirect }) => {
       <h1 className="register-headtext">帳號註冊</h1>
       <p className="register-text">名稱</p>
       <Form.Item
+        className="res-form"
         name="name"
         tooltip="What do you want others to call you?"
         rules={[
@@ -77,6 +78,7 @@ const RegisterCard = ({ redirect }) => {
       </Form.Item>
       <p className="register-text">電子郵件帳號</p>
       <Form.Item
+        className="res-form"
         name="email"
         rules={[
           {
@@ -95,6 +97,7 @@ const RegisterCard = ({ redirect }) => {
       <p className="register-text">密碼</p>
 
       <Form.Item
+        className="res-form"
         name="password"
         rules={[
           {
@@ -109,6 +112,7 @@ const RegisterCard = ({ redirect }) => {
       </Form.Item>
       <p className="register-text">再次輸入密碼</p>
       <Form.Item
+        className="res-form"
         name="rePassword"
         dependencies={["password"]}
         hasFeedback

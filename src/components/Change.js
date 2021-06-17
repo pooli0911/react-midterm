@@ -97,7 +97,7 @@ const ProfileCard = () => {
         <Button
           type="primary"
           htmlType="submit"
-          className="login-form__button"
+          className="login-form__button corr"
         >
           確認更改
         </Button>

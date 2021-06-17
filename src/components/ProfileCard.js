@@ -67,7 +67,7 @@ const ProfileCard = () => {
       <p className="cart-summary-profileText">
         {displayName}
       </p>
-      <p className="register-text">更改密碼</p>
+      <p className="register-text changepassw">更改密碼</p>
       <div>
         <Link to={"/change"} className="change-password-link">點我前往更改密碼</Link>
       </div>
@@ -75,7 +75,7 @@ const ProfileCard = () => {
       <div className="button-pos">
         <Button
           type="primary"
-          className="login-form__button"
+          className="login-form__button prologin"
           onClick={handleLogout}
         >
           登出
@@ -83,7 +83,7 @@ const ProfileCard = () => {
         <Button
           type="primary"
           style={{ marginTop: "0.8rem" }}
-          className="login-form__button"
+          className="login-form__button prologin"
           onClick={checkorder}
         >
           查看陣容
