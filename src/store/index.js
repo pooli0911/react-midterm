@@ -7,6 +7,7 @@ import {
    ADD_TEAM_ITEM,
    REMOVE_TEAM_ITEM,
    EMPTY_CART,
+   EMPTY_COMMENT,
    BEGIN_COOKIES_FEED,
    SUCCESS_COOKIES_FEED,
    FAIL_COOKIES_FEED,
@@ -28,6 +29,14 @@ import {
    SUCCESS_ORDER_CREATE,
    FAIL_ORDER_CREATE,
    RESET_ORDER,
+   BEGIN_COMMENT_CREATE,
+   SUCCESS_COMMENT_CREATE,
+   FAIL_COMMENT_CREATE,
+   FEED_TO_COMMENTITEM,
+   RESET_COMMENT,
+   BEGIN_COMMENT_DETAIL,
+   SUCCESS_COMMENT_DETAIL,
+   FAIL_COMMENT_DETAIL,
    BEGIN_ORDER_DETAIL,
    SUCCESS_ORDER_DETAIL,
    FAIL_ORDER_DETAIL,
@@ -51,6 +60,7 @@ let count = 0;
 //    : 0;
 
 
+
 let userInfo;
 try {
   userInfo =  JSON.parse(localStorage.getItem("userInfo"));
@@ -64,7 +74,15 @@ try {
 } catch(e) {
   orderInfo_order = { id: "" };
 }  
-
+let commentInfo_comment;
+try {
+  commentInfo_comment = JSON.parse(localStorage.getItem('commentInfo'));
+} catch(e) {
+  commentInfo_comment = { id: "" };
+}  
+let commentitem = localStorage.getItem("commentitem")
+? JSON.parse(localStorage.getItem("commentitem"))
+: [];
 
 const initialState = {
    home_img: battle,
@@ -80,6 +98,12 @@ const initialState = {
       order: orderInfo_order,
       success: false,
       error: null,
+    },
+    commentInfo:{
+      loading:false,
+      comment:commentInfo_comment,
+      success:false,
+      error:null,
     },
    orderDetail: {
       loading: true,
@@ -110,6 +134,9 @@ const initialState = {
     },
     orderid:[],
     orderitem:[],
+    commentitem:[],
+    
+    
 
 }
 
@@ -152,6 +179,9 @@ function reducer(state, action) {
       case EMPTY_CART:
          teamItems = [];
          return { ...state, cart: { ...state.cart, teamItems } };
+      // case EMPTY_COMMENT:
+      //  comment = [];
+      //  return { ...state, commentInfo: { ...state.comment, comment } };
       case BEGIN_COOKIES_REQUEST:
          return { ...state, requestCookies: { ...state.requestCookies, loading: true } };
       case SUCCESS_COOKIES_REQUEST:
@@ -294,6 +324,80 @@ function reducer(state, action) {
              success: false,
            },
          };
+         case BEGIN_COMMENT_CREATE:
+          return {
+            ...state,
+            commentInfo: {
+              ...state.commentInfo,
+              loading: true,
+              success: false,
+            }
+          };
+        case SUCCESS_COMMENT_CREATE:
+          return {
+            ...state,
+            commentInfo: {
+              ...state.commentInfo,
+              loading: false,
+              comment: action.payload,
+              success: true,
+              error: null,
+            },
+          };
+        case FAIL_COMMENT_CREATE:
+          return {
+            ...state,
+            commentInfo: {
+              ...state.commentInfo,
+              loading: false,
+              comment: { id: "" },
+              success: false,
+              error: action.payload,
+            },
+          };
+        case FEED_TO_COMMENTITEM:
+          console.log(action.payload);
+          return{
+            ...state,
+           commentitem:action.payload,
+
+          };
+        case RESET_COMMENT:
+          return {
+            ...state,
+            commentInfo: {
+              ...state.commentInfo,
+              loading: false,
+              comment: { id: "" },
+              success: false,
+            },
+          };
+        case BEGIN_COMMENT_DETAIL:
+          return {
+            ...state,
+            commentInfo: {
+              ...state.commentInfo,
+              loading: true,
+            }
+          };
+          case SUCCESS_COMMENT_DETAIL:
+            return {
+              ...state,
+              commentInfo: {
+                ...state.commentInfo,
+                loading: false,
+                cooment: action.payload,
+              },
+          };
+          case FAIL_COMMENT_DETAIL:
+            return {
+              ...state,
+              commentInfo: {
+                ...state.commentInfo,
+                loading: false,
+                error: action.payload,
+              },
+            };
        case BEGIN_ORDER_DETAIL:
          return {
            ...state,

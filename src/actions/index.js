@@ -2,6 +2,7 @@ import {
     ADD_TEAM_ITEM,
     REMOVE_TEAM_ITEM,
     EMPTY_CART,
+    EMPTY_COMMENT,
     BEGIN_COOKIES_FEED,
     SUCCESS_COOKIES_FEED,
     FAIL_COOKIES_FEED,
@@ -25,11 +26,19 @@ import {
     SUCCESS_ORDER_CREATE,
     FAIL_ORDER_CREATE,
     RESET_ORDER,
+    BEGIN_COMMENT_CREATE,
+    SUCCESS_COMMENT_CREATE,
+    FAIL_COMMENT_CREATE,
+    FEED_TO_COMMENTITEM,
+    RESET_COMMENT,
     BEGIN_ORDER_DETAIL,
     SUCCESS_ORDER_DETAIL,
     FAIL_ORDER_DETAIL,
     GET_ORDER_BY_USER,
-    GET_ORDER_ITEM_BY_USER
+    GET_ORDER_ITEM_BY_USER,
+    BEGIN_COMMENT_DETAIL,
+    SUCCESS_COMMENT_DETAIL,
+    FAIL_COMMENT_DETAIL,
 } from "../utils/constants"
 import { 
   getCookies, 
@@ -44,7 +53,9 @@ import {
   checkLoginApi,
   getOrderByUser,
   getOrderItemByUser,
-  removeOrderById
+  removeOrderById,
+  createCommentApi,
+  getComment
 } from "../api";
 
 export const addToTeamItem = (dispatch, cookie, count) => {
@@ -198,6 +209,48 @@ export const setPage = async (dispatch, url) => {
       return null;
     }  
   };
+  export const createComment=async(dispatch,comment,name)=>{
+    dispatch({type:BEGIN_COMMENT_CREATE});
+    try{
+      const item={
+        commentItems:comment,
+        name:name,
+      };
+      const commentInfo=await createCommentApi(item);
+      dispatch({
+        type:SUCCESS_COMMENT_CREATE,
+        payload:commentInfo
+      });
+      dispatch({type:EMPTY_COMMENT,})
+      localStorage.setItem('commentInfo', JSON.stringify(commentInfo));
+      localStorage.removeItem("comments");
+      return commentInfo;
+
+    }catch (error){
+      console.log(error);
+      dispatch({ type: FAIL_COMMENT_CREATE, payload: error });
+      return null;
+    }
+  };
+  export const requestComment = async(dispatch)=>{
+    dispatch ({type:BEGIN_COMMENT_DETAIL});
+    try{
+      const comment=await getComment();
+      dispatch({
+        type:SUCCESS_COMMENT_DETAIL,
+        payload:comment
+      });
+      dispatch({
+        type:FEED_TO_COMMENTITEM,
+        payload:comment
+      })
+    }catch(error){
+      dispatch({
+        type:FAIL_COMMENT_DETAIL,
+        payload:error
+      });
+    }
+  }
   
   export const requestOrderDetail = async (dispatch, orderId) => {
     dispatch({ type: BEGIN_ORDER_DETAIL });

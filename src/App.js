@@ -10,6 +10,7 @@ import Register from './pages/Register'
 import Profile from './pages/Profile'
 import Order from './pages/Order'
 import Change from './pages/Change'
+import Event from './pages/Event'
 
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route path="/order/:orderId" component={Order} />
             <Route path="/change" component={Change} />
+            <Route path="/event" component={Event}/>
           </Switch>
         </BrowserRouter>
       </StoreProvider >

@@ -24,6 +24,7 @@ const firebaseConfig = {
   const cookiesDocRef = cookiesCollectionRef.doc("json");
   const allCookiesCollectionRef = cookiesDocRef.collection("allCookies");
   const allOrdersCollectionRef = firebase.firestore().collection("allOrders");
+  const allCommentsCollectionRef=firebase.firestore().collection("allComments")
 
   //REFERENCE AUTH
   const auth = firebase.auth();
@@ -97,6 +98,23 @@ export const feedCookies = () => {
       user
     });
     return { ...order, id };
+  }
+  export const createCommentApi = async (comment) =>{
+    const commentRef=await allCommentsCollectionRef.doc();
+    const id = commentRef.id;
+    await commentRef.set({
+      ...comment,
+      id
+    });
+    return {...comment,id};
+  }
+  export const getComment = async()=>{
+    let jsonComments=[];
+    const querySnapshot=await allCommentsCollectionRef.get();
+    querySnapshot.forEach((doc)=>{
+      jsonComments.push(doc.data());
+    });
+    return jsonComments;
   }
   
   export const getOrderById = async (orderId) => {

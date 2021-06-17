@@ -11,6 +11,9 @@ export default function HeaderNavBar({ isOnTouch }) {
     const checkoutHandler = () => {
         history.push("/login?redirect=team");
      }
+     const checkoutEvent = () => {
+        history.push("/login?redirect=event");
+     }
     return (
         <>
             <div className={`header-text ${isOnTouch ? "" : "header-text-wrap"}`}>
@@ -19,6 +22,7 @@ export default function HeaderNavBar({ isOnTouch }) {
                 <Badge className="count-badge" count={count} size={"small"} style={{ color: 'white', backgroundColor: '#46413A' }}>
                    <div onClick={checkoutHandler} className="header-text-item" activeclassName="header-text-item--active">陣容預覽</div>
                 </Badge>
+                <div onClick={checkoutEvent} className="header-text-item" activeclassName="header-text-item--active">特殊活動</div>
                 <Link to="/number" className="header-text-item" activeclassName="header-text-item--active">序號兌換</Link>
                 <UserInfo/>
                 
