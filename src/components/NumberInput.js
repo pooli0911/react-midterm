@@ -6,13 +6,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import NumberLogo from "../img/number/number.png"
 import Step from "../img/number/step.png"
+import Step1 from "../img/number/snumber01.png"
+import Step2 from "../img/number/snumber02.png"
+import Step3 from "../img/number/snumber03.png"
 gsap.registerPlugin(ScrollTrigger);
 
-// import NumberLogo from "../img/number/number.png"
-// import Step from "../img/number/step.png"
-// import Step1 from "../img/number/snumber01.png"
-// import Step2 from "../img/number/snumber02.png"
-// import Step3 from "../img/number/snumber03.png"
 
 
 export default function NumberInput() {
@@ -26,12 +24,11 @@ export default function NumberInput() {
                 autoAlpha: 1,
                 ease: 'none',
                 scrollTrigger: {
-                    id: `section-${index + 1}`,
                     // pin: true,
                     // scrub: true,
                     trigger: ref,
                     // markers: true,
-                    start: 'top center+=100', //當ref的top碰到畫面中央+100px的高度時，就觸發動畫
+                    start: 'top center+=250', //當ref的top碰到畫面中央+100px的高度時，就觸發動畫
                     toggleActions: 'play none none reverse'
                     //play none none reverse 對應四個動作
                     // onEnter - scrolling down, start meets scroller-start
@@ -44,17 +41,7 @@ export default function NumberInput() {
         });
 
     }, []);
-    const sections = [
-        {
-            numbersimg: '../img/number/snumber01.png'
-        },
-        {
-            numbersimg: '../img/number/snumber02.png'
-        },
-        {
-            numbersimg: '../img/number/snumber03.png'
-        },
-    ]
+
     const revealRefs = useRef([]);
     revealRefs.current = [];
 
@@ -111,13 +98,15 @@ export default function NumberInput() {
             </div> */}
             <div className="App">
                 <main className="App-main number-step">
-                    {
-                        sections.map(({ numbersimg }) => (
-                            <div className="App-section step-img" key={numbersimg} ref={addToRefs}>
-                                <img className="step-img" src={numbersimg}></img>
-                            </div>
-                        ))
-                    }
+                    <div className="App-section step-img" key={Step1} ref={addToRefs}>
+                        <img className="step-img" src={Step1}></img>
+                    </div>
+                    <div className="App-section step-img" key={Step2} ref={addToRefs}>
+                        <img className="step-img" src={Step2}></img>
+                    </div>
+                    <div className="App-section step-img" key={Step3} ref={addToRefs}>
+                        <img className="step-img" src={Step3}></img>
+                    </div>
                 </main>
             </div>
         </>

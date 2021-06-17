@@ -67,7 +67,7 @@ const ProfileCard = () => {
       <p className="cart-summary-profileText">
         {displayName}
       </p>
-      <p className="register-text">更改密碼</p>
+      <p className="register-text changepassw">更改密碼</p>
       <div>
         <Link to={"/change"} className="change-password-link">點我前往更改密碼</Link>
       </div>
@@ -75,7 +75,7 @@ const ProfileCard = () => {
       <div className="button-pos">
         <Button
           type="primary"
-          className="login-form__button"
+          className="login-form__button prologin"
           onClick={handleLogout}
         >
           登出
@@ -83,7 +83,7 @@ const ProfileCard = () => {
         <Button
           type="primary"
           style={{ marginTop: "0.8rem" }}
-          className="login-form__button"
+          className="login-form__button prologin"
           onClick={checkorder}
         >
           查看陣容
@@ -94,8 +94,13 @@ const ProfileCard = () => {
             orderitem.map((id) =>
 
               <div className="orderlist">
+<<<<<<< HEAD
                 <Button className="order" onClick={() => clickorderid(id)}>Team:{id}</Button>
                 <div className="cart-item-end">
+=======
+                <Button className="order" onClick={() => clickorderid(id)}>Number:{id}</Button>
+                <div className="cart-item-del">
+>>>>>>> 93287c2fed837b3d2312524bdbdc8f6be7c41c07
                   <div className="cart-item-delete" onClick={() => removeOrder(id)}>
                     刪除隊伍
                   </div>

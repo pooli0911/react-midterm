@@ -21,8 +21,8 @@ export default function UserInfo(props) {
       <>
          <nav onClick={goToProfile} style={{ ...props.style }} className="header-cart-summary" >
             {userInfo
-               ? <TeamOutlined style={{ fontSize: '35px', color: '#46413A' }} />
-               : <UserSwitchOutlined style={{ fontSize: '35px', color: '#46413A' }} />
+               ? <TeamOutlined className="loginpic" style={{ fontSize: '35px' }} />
+               : <UserSwitchOutlined style={{ fontSize: '35px' }} />
 
             }
             <p className="cart-summary-text">

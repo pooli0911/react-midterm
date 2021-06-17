@@ -35,6 +35,7 @@ const LoginCard = ({ redirect }) => {
       <Form.Item
 
         name="email"
+        className="typeplace"
         style={{ color: "#ffa29c" }}
         rules={[
           {
@@ -54,8 +55,9 @@ const LoginCard = ({ redirect }) => {
           placeholder="E-Mail"
         />
       </Form.Item>
-      <p className="logIn-account">密碼</p>
+      <p className="logIn-account account-pass">密碼</p>
       <Form.Item
+        className="typeplace"
         name="password"
         rules={[
           {
@@ -76,8 +78,8 @@ const LoginCard = ({ redirect }) => {
           <Checkbox ><p className="remember">記住帳號</p></Checkbox>
         </Form.Item>
       </Form.Item>
-      <Form.Item>
-        <Link to={"/register?redirect=profile"} className="account-link">忘記密碼</Link>
+      <Form.Item className="forpass">
+        <Link to={"/register?redirect=profile"} className="account-link">忘記密碼？</Link>
         <div className="account-flex">
           {/* <p className="accountText">還沒有帳號？</p> */}
           <Link to={"/register?redirect=profile"} className="account-link">還沒有帳號？點擊註冊！</Link>
