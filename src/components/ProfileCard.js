@@ -94,13 +94,8 @@ const ProfileCard = () => {
             orderitem.map((id) =>
 
               <div className="orderlist">
-<<<<<<< HEAD
-                <Button className="order" onClick={() => clickorderid(id)}>Team:{id}</Button>
-                <div className="cart-item-end">
-=======
                 <Button className="order" onClick={() => clickorderid(id)}>Number:{id}</Button>
                 <div className="cart-item-del">
->>>>>>> 93287c2fed837b3d2312524bdbdc8f6be7c41c07
                   <div className="cart-item-delete" onClick={() => removeOrder(id)}>
                     刪除隊伍
                   </div>

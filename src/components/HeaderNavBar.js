@@ -10,14 +10,10 @@ export default function HeaderNavBar({ isOnTouch }) {
     const history = useHistory();
     const checkoutHandler = () => {
         history.push("/login?redirect=team");
-<<<<<<< HEAD
      }
      const checkoutEvent = () => {
         history.push("/login?redirect=event");
      }
-=======
-    }
->>>>>>> 93287c2fed837b3d2312524bdbdc8f6be7c41c07
     return (
         <>
             <div className={`header-text ${isOnTouch ? "" : "header-text-wrap"}`}>
