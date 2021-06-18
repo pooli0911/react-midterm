@@ -31,6 +31,11 @@ import {
     FAIL_COMMENT_CREATE,
     FEED_TO_COMMENTITEM,
     RESET_COMMENT,
+    BEGIN_COMMENT2_CREATE,
+    SUCCESS_COMMENT2_CREATE,
+    FAIL_COMMENT2_CREATE,
+    FEED_TO_COMMENTITEM2,
+    RESET_COMMENT2,
     BEGIN_ORDER_DETAIL,
     SUCCESS_ORDER_DETAIL,
     FAIL_ORDER_DETAIL,
@@ -39,6 +44,10 @@ import {
     BEGIN_COMMENT_DETAIL,
     SUCCESS_COMMENT_DETAIL,
     FAIL_COMMENT_DETAIL,
+    BEGIN_COMMENT2_DETAIL,
+    SUCCESS_COMMENT2_DETAIL,
+    FAIL_COMMENT2_DETAIL,
+    EMPTY_COMMENT2
 } from "../utils/constants"
 import { 
   getCookies, 
@@ -55,7 +64,9 @@ import {
   getOrderItemByUser,
   removeOrderById,
   createCommentApi,
-  getComment
+  getComment,
+  createComment2Api,
+  getComment2,
 } from "../api";
 
 export const addToTeamItem = (dispatch, cookie, count) => {
@@ -247,6 +258,48 @@ export const setPage = async (dispatch, url) => {
     }catch(error){
       dispatch({
         type:FAIL_COMMENT_DETAIL,
+        payload:error
+      });
+    }
+  }
+  export const createComment2=async(dispatch,comment,name)=>{
+    dispatch({type:BEGIN_COMMENT2_CREATE});
+    try{
+      const item={
+        commentItems:comment,
+        name:name,
+      };
+      const commentInfo=await createComment2Api(item);
+      dispatch({
+        type:SUCCESS_COMMENT2_CREATE,
+        payload:commentInfo
+      });
+      // dispatch({type:EMPTY_COMMENT2,})
+      localStorage.setItem('commentInfo', JSON.stringify(commentInfo));
+      localStorage.removeItem("comments");
+      return commentInfo;
+
+    }catch (error){
+      console.log(error);
+      dispatch({ type: FAIL_COMMENT2_CREATE, payload: error });
+      return null;
+    }
+  };
+  export const requestComment2 = async(dispatch)=>{
+    dispatch ({type:BEGIN_COMMENT2_DETAIL});
+    try{
+      const comment=await getComment2();
+      dispatch({
+        type:SUCCESS_COMMENT2_DETAIL,
+        payload:comment
+      });
+      dispatch({
+        type:FEED_TO_COMMENTITEM2,
+        payload:comment
+      })
+    }catch(error){
+      dispatch({
+        type:FAIL_COMMENT2_DETAIL,
         payload:error
       });
     }

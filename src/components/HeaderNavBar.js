@@ -3,15 +3,18 @@ import UserInfo from "./UserInfo"
 import { Badge } from "antd";
 import { StoreContext } from "../store"
 import { useState, useContext } from "react";
+import { requestComment,requestComment2 } from '../actions'
 
 
 export default function HeaderNavBar({ isOnTouch }) {
-    const { state: { cart: { cartItems }, count } } = useContext(StoreContext);
+    const { state: { cart: { cartItems }, count },dispatch } = useContext(StoreContext);
     const history = useHistory();
     const checkoutHandler = () => {
         history.push("/login?redirect=team");
      }
      const checkoutEvent = () => {
+        requestComment(dispatch);
+        requestComment2(dispatch);
         history.push("/login?redirect=event");
      }
     return (

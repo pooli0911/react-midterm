@@ -25,6 +25,7 @@ const firebaseConfig = {
   const allCookiesCollectionRef = cookiesDocRef.collection("allCookies");
   const allOrdersCollectionRef = firebase.firestore().collection("allOrders");
   const allCommentsCollectionRef=firebase.firestore().collection("allComments")
+  const allComments2CollectionRef=firebase.firestore().collection("allComments2")
 
   //REFERENCE AUTH
   const auth = firebase.auth();
@@ -111,6 +112,23 @@ export const feedCookies = () => {
   export const getComment = async()=>{
     let jsonComments=[];
     const querySnapshot=await allCommentsCollectionRef.get();
+    querySnapshot.forEach((doc)=>{
+      jsonComments.push(doc.data());
+    });
+    return jsonComments;
+  }
+  export const createComment2Api = async (comment) =>{
+    const commentRef=await allComments2CollectionRef.doc();
+    const id = commentRef.id;
+    await commentRef.set({
+      ...comment,
+      id
+    });
+    return {...comment,id};
+  }
+  export const getComment2 = async()=>{
+    let jsonComments=[];
+    const querySnapshot=await allComments2CollectionRef.get();
     querySnapshot.forEach((doc)=>{
       jsonComments.push(doc.data());
     });

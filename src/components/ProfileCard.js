@@ -51,6 +51,8 @@ const ProfileCard = () => {
     history.push("/order/" + id);
     // history.push("/order/"+orderid[orderitem.indexOf(id)]);
   }
+  
+
   //  const addnum=() => {
   //    if(num<4){
   //      setnum(num+1);
@@ -71,6 +73,7 @@ const ProfileCard = () => {
       <div>
         <Link to={"/change"} className="change-password-link">點我前往更改密碼</Link>
       </div>
+
 
       <div className="button-pos">
         <Button
@@ -104,6 +107,8 @@ const ProfileCard = () => {
 
               </div>
             )
+            
+           
 
           ) : (
             <div></div>

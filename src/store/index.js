@@ -42,7 +42,15 @@ import {
    FAIL_ORDER_DETAIL,
    GET_ORDER_BY_USER,
    GET_ORDER_ITEM_BY_USER,
-   REMOVE_ORDER_ITEM
+   REMOVE_ORDER_ITEM,
+   BEGIN_COMMENT2_CREATE,
+   SUCCESS_COMMENT2_CREATE,
+   FAIL_COMMENT2_CREATE,
+   FEED_TO_COMMENTITEM2,
+   RESET_COMMENT2,
+   BEGIN_COMMENT2_DETAIL,
+   SUCCESS_COMMENT2_DETAIL,
+   FAIL_COMMENT2_DETAIL,
 } from "../utils/constants";
 import battle from "../json/home_img1.json"
 import tank from "../json/tank.json"
@@ -80,6 +88,12 @@ try {
 } catch(e) {
   commentInfo_comment = { id: "" };
 }  
+let commentInfo2_comment;
+try {
+  commentInfo2_comment = JSON.parse(localStorage.getItem('commentInfo2'));
+} catch(e) {
+  commentInfo2_comment = { id: "" };
+}  
 let commentitem = localStorage.getItem("commentitem")
 ? JSON.parse(localStorage.getItem("commentitem"))
 : [];
@@ -102,6 +116,12 @@ const initialState = {
     commentInfo:{
       loading:false,
       comment:commentInfo_comment,
+      success:false,
+      error:null,
+    },
+    commentInfo2:{
+      loading2:false,
+      comment:commentInfo2_comment,
       success:false,
       error:null,
     },
@@ -135,6 +155,7 @@ const initialState = {
     orderid:[],
     orderitem:[],
     commentitem:[],
+    commentitem2:[],
     
     
 
@@ -386,7 +407,7 @@ function reducer(state, action) {
               commentInfo: {
                 ...state.commentInfo,
                 loading: false,
-                cooment: action.payload,
+                comment: action.payload,
               },
           };
           case FAIL_COMMENT_DETAIL:
@@ -398,6 +419,80 @@ function reducer(state, action) {
                 error: action.payload,
               },
             };
+          case BEGIN_COMMENT2_CREATE:
+            return {
+              ...state,
+              commentInfo2: {
+                ...state.commentInfo2,
+                loading2: true,
+                success: false,
+              }
+            };
+          case SUCCESS_COMMENT2_CREATE:
+            return {
+              ...state,
+              commentInfo2: {
+                ...state.commentInfo2,
+                loading2: false,
+                comment: action.payload,
+                success: true,
+                error: null,
+              },
+            };
+          case FAIL_COMMENT2_CREATE:
+            return {
+              ...state,
+              commentInfo2: {
+                ...state.commentInfo2,
+                loading2: false,
+                comment: { id: "" },
+                success: false,
+                error: action.payload,
+              },
+            };
+          case FEED_TO_COMMENTITEM2:
+            console.log(action.payload);
+            return{
+              ...state,
+             commentitem2:action.payload,
+  
+            };
+          case RESET_COMMENT2:
+            return {
+              ...state,
+              commentInfo2: {
+                ...state.commentInfo2,
+                loading2: false,
+                comment: { id: "" },
+                success: false,
+              },
+            };
+          case BEGIN_COMMENT2_DETAIL:
+            return {
+              ...state,
+              commentInfo2: {
+                ...state.commentInfo2,
+                loading2: true,
+              }
+            };
+            case SUCCESS_COMMENT2_DETAIL:
+              return {
+                ...state,
+                commentInfo2: {
+                  ...state.commentInfo2,
+                  loading2: false,
+                  comment: action.payload,
+                },
+            };
+            case FAIL_COMMENT2_DETAIL:
+              return {
+                ...state,
+                commentInfo2: {
+                  ...state.commentInfo2,
+                  loading2: false,
+                  error: action.payload,
+                },
+              };
        case BEGIN_ORDER_DETAIL:
          return {
            ...state,
