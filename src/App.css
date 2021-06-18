@@ -892,14 +892,14 @@ body {
   width:90%;
 }
 .event-title{
-  font-size:36px;
+  font-size:32px;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
   margin-bottom: 6%;
 }
 .event-text,
 .event-mission{
-  font-size:24px;
+  font-size:20px;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
 }
@@ -910,7 +910,7 @@ body {
   margin-left: -1%;
 }
 .event-notice{
-  font-size:18px;
+  font-size:14px;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
 }
@@ -938,7 +938,7 @@ body {
   width:50%;
 }
 .id-text{
-  font-size:24px;
+  font-size:20px;
   font-family: 'FakePearl-Regular',sans-serif;
   color: #FFE9CB;
   margin-left:10%;
@@ -954,6 +954,9 @@ body {
 .click-upload{
   margin-left:-43%;
 
+}
+.evesecond{
+  margin-bottom: 5%;
 }
 .displayname{
   font-size:24px;
@@ -1009,13 +1012,12 @@ body {
   padding-left:5% !important;
 
 }
-.ant-table-tbody:hover{
-  background-color:#6c6052 !important;
-
+.ant-table-cell:hover{
+  color: #6c6052;
 }
-
-
-
+/* .ant-table-tbody:hover{
+  background-color:#6c6052 !important;
+} */
 
 
 @media (max-width: 1000px){
