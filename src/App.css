@@ -150,9 +150,15 @@ body {
   transition: 0.15s;
   cursor: pointer;
 }
+.headerText {
+  right: 5%;
+  position: absolute;
+  width:180px;
+  margin-top:1.5%;
+}
 
 .headerTextItem{
-  position:absolute;
+  position:relative;
   right:5%;
   height:60px;
   font-family: 'FakePearl-Regular',sans-serif;
@@ -180,8 +186,9 @@ body {
     margin-top:7.5%;
     margin-right:35%;
   }
-  .headerTextItem{
-    margin-right:65%;
+  .headerText{
+    left:0%;
+    margin-top:1%;
   }
 }
 @media (max-width: 380px){
@@ -189,10 +196,12 @@ body {
     margin-top:16%;
     margin-right:18%;
   }
+  .headerText{
+    left:-5%;
+    margin-top:1%;
+  }
   .headerTextItem{
-    font-size:14px;
     padding-top:10%;
-    margin-top:-5%;
   }
 }
 /* .cart-summary-text{
