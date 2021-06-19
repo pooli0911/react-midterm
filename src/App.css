@@ -567,11 +567,27 @@ body {
   margin-top: 20%;
   margin-bottom: 20%;
 }
+
+@media (max-width:800px){
+  .spinner{
+    color: #ffe9cb;
+    margin-left: 45%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    }
+
+}
 @media (max-width:380px){
   .cardpos{
     display:block;
     text-align: center;
   }
+  .spinner{
+    color: #46413a;
+    margin-left: 40%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    }
 
 }
 @-webkit-keyframes bounce-down {
