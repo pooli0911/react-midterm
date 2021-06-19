@@ -996,7 +996,7 @@ body {
 .upload__button{
   width: 80px;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 10px;
   font-family: 'FakePearl-Regular',sans-serif;
   font-weight: bold;
   background-color:  #2b2017;
@@ -1030,7 +1030,6 @@ body {
   display:none;
 }
 
-
 .ant-table-cell{
   height:100px;
   width:100%;
@@ -1046,7 +1045,7 @@ body {
 /* .ant-table-tbody:hover{
   background-color:#6c6052 !important;
 } */
-@media (max-width:768px){
+@media (max-width:800px){
   .img-flex{
     display:block;
   }
@@ -1057,29 +1056,135 @@ body {
     width:100%;
     margin-left:10%;
   }
+  .event-img{
+    margin-left: 14%;
+  }
+  .event-text, .event-mission, .event-notice, .event-title{
+    width: 500px;
+    margin-left: -5%;
+  }
+  .event-title{
+    margin-top: 3%;
+  }
   .input-flex{
     display:block;
   }
   .id-flex{
     width:100%;
   }
+  .id-text{
+    margin-top: 3%;
+    margin-left: 11%;
+  }
   .screen-flex{
     width:100%;
   }
   .displayname{
-    margin-left:10%;
+    margin-top: 3%;
+    margin-left:11%;
   }
   .screen-text{
-    margin-left:10%;
+    font-size: 20px;
+    margin-left:11%;
+  }
+  .input-id{
+    margin-top: 3%;
+    margin-left: -21.5%;
+    width: 154px;
   }
   .upload__button{
-    margin-left:10%;
+    margin-left:43%;
+    margin-bottom: 3%;
   }
   .click-upload{
     margin-left:-18%;
   }
+  .ant-table-cell{
+    font-size: 18px;
+  }
 }
-
+@media (max-width:400px){
+  .img-flex{
+    display:block;
+  }
+  .input-flex{
+    display: block;
+  }
+  .flex1{
+    width:100%;
+  }
+  .flex2{
+    width:100%;
+    margin-left:10%;
+  }
+  .event-img{
+    margin-left: 14%;
+  }
+  .event-text, .event-mission, .event-notice, .event-title{
+    width: 260px;
+    margin-left: -7%;
+  }
+  .event-title{
+    margin-top: 3%;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .event-text, .event-mission{
+    font-size: 14px;
+  }
+  .event-text1{
+    margin-top: 5px;
+  }
+  .event-notice{
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .id-flex{
+    display:block;
+  }
+  .id-flex{
+    width:100%;
+  }
+  .id-text{
+    font-size: 10px;
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 300px;
+  }
+  .screen-flex{
+    width:100%;
+  }
+  .displayname{
+    font-size: 18px;
+    margin-top: 3%;
+    margin-left:20%;
+  }
+  .screen-text{
+    font-size: 10px;
+    margin-left:20%;
+  }
+  .input-id{
+    margin-top: -2%;
+    width: 160px;
+    margin-left: 20%;
+  }
+  .upload__button{
+    width: 80px;
+    font-size: 14px;
+    margin-left: 35%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+  }
+  .click-upload{
+    margin-top: 7%;
+    width: 150px;
+    height: 30px;
+    margin-left:-30%;
+  }
+  .ant-table-cell{
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 1000px){
   .login-backgrund{
