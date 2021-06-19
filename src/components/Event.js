@@ -89,11 +89,13 @@ export default function Event({ redirect }) {
           <div className="flex2">
             <div className="title-box">
               <h1 className="event-title">教/團/密/令：懸賞通緝任務發布</h1>
-              <p className="event-text event-text1">【🔥今日懸賞通緝 完成每日次數🔥】</p>
-              <p className="event-text">💚完成後截圖分享至本留言串</p>
-              <p className="event-text">💚分享時記得加上你的玩家ID(英文+數字)</p>
-              <p className="event-text">💚就有機會獲得10個魔法餅乾模具跟10個寶物扭蛋券</p>
-              <p className="event-mission">✨特別任務獎勵：第一個符合活動方式的留言者可直接獲得10個魔法餅乾模具跟10個寶物扭蛋券</p>
+              <div className="maxfour">
+                <p className="event-text event-text1">【🔥今日懸賞通緝 完成每日次數🔥】</p>
+                <p className="event-text">💚完成後截圖分享至本留言串</p>
+                <p className="event-text">💚分享時記得加上你的玩家ID(英文+數字)</p>
+                <p className="event-text">💚就有機會獲得10個魔法餅乾模具跟10個寶物扭蛋券</p>
+                <p className="event-mission">✨特別任務獎勵：第一個符合活動方式的留言者可直接獲得10個魔法餅乾模具跟10個寶物扭蛋券</p>
+              </div>
               <p className="event-notice">注意事項：<br></br>活動日期：即日起~6/13 23:59止<br></br>每次活動將抽取11名玩家獲獎(含特別任務獎勵)
                 參加活動必須提供正確玩家ID，未提供或提供有誤者將不列入活動計算薑餅人王國》營運團隊擁有活動的最終解釋權。</p>
             </div>
