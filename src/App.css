@@ -184,10 +184,15 @@ body {
     margin-right:65%;
   }
 }
-@media (max-width: 375px){
+@media (max-width: 380px){
   .ant-badge-count{
     margin-top:16%;
     margin-right:18%;
+  }
+  .headerTextItem{
+    font-size:14px;
+    padding-top:10%;
+    margin-top:-5%;
   }
 }
 /* .cart-summary-text{
@@ -552,6 +557,13 @@ body {
   margin-left: 47.5%;
   margin-top: 20%;
   margin-bottom: 20%;
+}
+@media (max-width:380px){
+  .cardpos{
+    display:block;
+    text-align: center;
+  }
+
 }
 @-webkit-keyframes bounce-down {
 	25% {
