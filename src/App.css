@@ -1438,6 +1438,9 @@ body {
     height: 20px;
     margin-top: -5px;
   }
+  .lineuptitle{
+    font-size: 28px;
+  }
 }
 
 /* header */
