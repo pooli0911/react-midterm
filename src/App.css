@@ -1268,6 +1268,9 @@ body {
     font-size: 12px;
     margin-top: -8px;
   }
+  .primary-btn{
+    height: 30px;
+  }
 }
 
 @media (max-width: 1000px){
@@ -1446,6 +1449,9 @@ body {
   .ant-input-affix-wrapper{
     height: 20px;
     margin-top: -5px;
+  }
+  .lineuptitle{
+    font-size: 28px;
   }
 }
 
