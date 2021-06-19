@@ -738,7 +738,7 @@ body {
   /* border-radius: 50%; */
   width: 150px;
   height: 30px;
-  margin-left: 10px;
+  margin-left: -10px;
   margin-top: 45px;
   cursor: pointer;
   transition: 0.15s;
@@ -753,8 +753,7 @@ body {
   transition: 0.15s;
 }
 .order{
-  width: 400px;
-  margin-left: 15px;
+  margin-left: 50px;
   margin-top: 10%;
   background-color: #ffe9cb !important;
 }
@@ -1136,6 +1135,23 @@ body {
   .ant-table-cell{
     font-size: 18px;
   }
+  .order{
+    width: 450px;
+    height: 30px;
+    margin-left: -20px;
+  }
+  .orderlist{
+    width: 350px;
+  }
+  .cart-item-del{
+    width: 150px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+  .ant-btn{
+    margin-top: 10px;
+  }
 }
 @media (max-width:400px){
   .img-flex{
@@ -1218,6 +1234,28 @@ body {
   .ant-table-cell{
     font-size: 12px;
   }
+  .orderlist{
+    width: 150px;
+    width: 175px;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+  .order{
+    width: 250px;
+    font-size: 10px;
+  } 
+  .ant-btn{
+    overflow: hidden;
+    line-height: 10px;
+    height: 20px;
+    font-size: 10px;
+    margin-top: -8px;
+  }
+  .cart-item-del{
+    /* display: none; */
+    font-size: 12px;
+    margin-top: -8px;
+  }
 }
 
 @media (max-width: 1000px){
@@ -1234,7 +1272,7 @@ body {
   .logIn-headtext{
     font-size: 36px;
     margin-left:27.5%;
-    margin-top:110%;
+    margin-top:90%;
     font-family: 'FakePearl-Regular',sans-serif;
     color: #FFE9CB;
   }
@@ -1289,7 +1327,7 @@ body {
     background-color:#2b2017 ;
     background-size: 80%;
     width:100%;
-    height:600px;
+    height:625px;
   }
   .login-form{
     width: 40%;
@@ -1340,10 +1378,9 @@ body {
     border-radius: 10px;
     width: 90px;
     height: 40px;
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 23%;
     margin-top: -10px;
-    margin-bottom: 5%;
   }
   .account-link{
     /* margin-top: -px; */
