@@ -873,7 +873,6 @@ body {
 }
 .img-flex{
   display:flex;
-  
 }
 .flex1{
   width:50%;
@@ -1018,7 +1017,43 @@ body {
 /* .ant-table-tbody:hover{
   background-color:#6c6052 !important;
 } */
-
+@media (max-width: 1000px){
+  .img-flex{
+    display: block;
+    /* margin-left: 20px; */
+    /* background-color: red; */
+  }
+  .event-img{
+    margin-left: 12%;
+  }
+  .flex1{
+    width:100%;
+  
+  }
+  .flex2{
+    width:100%;
+    margin-left: 6%;
+    margin-top: 5%;
+  }
+  .event-notice{
+    width: 103%;
+  }
+}
+@media (max-width: 400px){
+  .event-title{
+    font-size: 17px;
+  }
+  .event-text, .event-mission{
+    font-size: 13px;
+  }
+  .maxfour{
+    margin-top: 30px;
+  }
+  .event-notice{
+    font-size: 8px;
+    margin-top: 40px;
+  }
+}
 
 @media (max-width: 1000px){
   .login-backgrund{
