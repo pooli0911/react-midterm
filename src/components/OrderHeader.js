@@ -17,8 +17,8 @@ export default function OrderHeader() {
                         </Link>
                         
                     </div>
-                    <div className="header-text">
-                    <Link to="/" className="header-text-item" activeclassName="header-text-item--active">返回首頁</Link>
+                    <div className="headerText">
+                    <Link to="/" className="headerTextItem" activeclassName="header-text-item--active">返回首頁</Link>
                     </div>
                 </header>
                 <BackTop />
