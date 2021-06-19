@@ -1256,6 +1256,9 @@ body {
     font-size: 12px;
     margin-top: -8px;
   }
+  .primary-btn{
+    height: 30px;
+  }
 }
 
 @media (max-width: 1000px){
