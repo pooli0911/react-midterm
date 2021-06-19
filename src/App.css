@@ -513,6 +513,12 @@ body {
   margin: auto;
   margin-left: 0;
 }
+.spinner{
+  color: #ffe9cb;
+  margin-left: 47.5%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
 @-webkit-keyframes bounce-down {
 	25% {
 		-webkit-transform: translateY(-10px);
