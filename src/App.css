@@ -69,6 +69,12 @@ body {
   width: 100vw;
   margin: 0;
 }
+.ant-btn-primary{
+  border-color: #ffe9cb !important;
+}
+.ant-btn-primary:hover{
+  background-color: #a58957 !important;
+}
 .ant-back-top-icon{
   background-color: #E0C595;
 }
@@ -157,7 +163,7 @@ body {
 }
 @media (max-width: 800px){
   .ant-badge-count{
-    margin-top:17.5%;
+    margin-top:7.5%;
     margin-right:35%;
   }
 }
@@ -489,6 +495,23 @@ body {
   color: white;
   font-family: 'FakePearl-Regular',sans-serif;
   font-size: 28px;
+}
+.cardpos{
+  display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.cardtext{
+  color: #ffe9cb;
+  font-family: 'FakePearl-Regular',sans-serif;
+  margin: auto;
+  margin-right: 0;
+}
+.cardid{
+  font-family: 'FakePearl-Regular',sans-serif;
+  color: #ffe9cb;
+  margin: auto;
+  margin-left: 0;
 }
 @-webkit-keyframes bounce-down {
 	25% {
