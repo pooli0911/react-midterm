@@ -1287,6 +1287,9 @@ body {
   .primary-btn{
     height: 30px;
   }
+  .ant-btn-primary{
+    height: 40px;
+  }
 }
 
 @media (max-width: 1000px){
