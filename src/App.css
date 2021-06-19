@@ -150,6 +150,20 @@ body {
   transition: 0.15s;
   cursor: pointer;
 }
+
+.headerTextItem{
+  position:absolute;
+  right:5%;
+  height:60px;
+  font-family: 'FakePearl-Regular',sans-serif;
+  text-align: right;
+  margin-left:45px;
+  font-size: 24px;
+  color:#46413A;
+  transition: 0.15s;
+  cursor: pointer;
+  padding-top:1.5%;
+}
 .header-cart-summary{
   font-family: 'FakePearl-Regular',sans-serif;
   cursor: pointer;
@@ -165,6 +179,9 @@ body {
   .ant-badge-count{
     margin-top:7.5%;
     margin-right:35%;
+  }
+  .headerTextItem{
+    margin-right:65%;
   }
 }
 @media (max-width: 375px){
@@ -192,6 +209,22 @@ body {
   width: 100%;
 }
 .header-text-item:hover{
+  color: #46413A;
+}
+.headerTextItem:after{
+  content:'';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #46413a;
+  transition: 0.15s;
+}
+.headerTextItem:hover:after{
+  cursor: pointer;
+  width: 100%;
+}
+.headerTextItem:hover{
   color: #46413A;
 }
 /*Home-top-content*/
@@ -288,6 +321,7 @@ body {
     cursor: pointer;
     width: 100%;
   }
+
 }
 
 .nav-bar{
