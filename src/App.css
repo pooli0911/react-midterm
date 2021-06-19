@@ -1018,6 +1018,39 @@ body {
 /* .ant-table-tbody:hover{
   background-color:#6c6052 !important;
 } */
+@media (max-width:768px){
+  .img-flex{
+    display:block;
+  }
+  .flex1{
+    width:100%;
+  }
+  .flex2{
+    width:100%;
+    margin-left:10%;
+  }
+  .input-flex{
+    display:block;
+  }
+  .id-flex{
+    width:100%;
+  }
+  .screen-flex{
+    width:100%;
+  }
+  .displayname{
+    margin-left:10%;
+  }
+  .screen-text{
+    margin-left:10%;
+  }
+  .upload__button{
+    margin-left:10%;
+  }
+  .click-upload{
+    margin-left:-18%;
+  }
+}
 
 
 @media (max-width: 1000px){
