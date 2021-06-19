@@ -38,8 +38,8 @@ function Home() {
                         <AppHeader isOnTouch={isOnTouch} />
                     </Header>
                     <Content className="layout-content">
-                        
-                        <Event/>
+                        <div className="lineuptitle">特殊活動</div>
+                        <Event />
                     </Content>
                     <Footer className="layout-footer">
                         <AppFooter />
