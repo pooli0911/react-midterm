@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { StatusBar } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import './App.css';
 import Home from './pages/Home'
@@ -21,8 +22,8 @@ function App() {
   return (
     <div>
       <StoreProvider>
-        <SafeAreaView style={[styles.container, { backgroundColor: '#6a51ae' }]}>
-          <StatusBar barStyle="light-content" backgroundColor="#6a51ae" />
+        <SafeAreaView style={[styles.container, { backgroundColor: '#e0c595' }]}>
+          <StatusBar barStyle="light-content" backgroundColor="#e0c595" />
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Home} />
