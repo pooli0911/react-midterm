@@ -1296,6 +1296,9 @@ body {
   .primary-btn{
     height: 30px;
   }
+  .ant-btn-primary{
+    height: 40px;
+  }
 }
 
 @media (max-width: 1000px){
@@ -1472,6 +1475,7 @@ body {
     width: 250px;
   }
   .ant-input-affix-wrapper{
+    width: 150px;
     height: 20px;
     margin-top: -5px;
   }
