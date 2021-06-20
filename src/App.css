@@ -1475,6 +1475,7 @@ body {
     width: 250px;
   }
   .ant-input-affix-wrapper{
+    width: 150px;
     height: 20px;
     margin-top: -5px;
   }
