@@ -69,6 +69,11 @@ body {
   width: 100vw;
   margin: 0;
 }
+@media(max-width:380px){
+  body{
+    background-color: #E0C595;
+  }
+}
 .ant-btn-primary{
   border-color: #ffe9cb !important;
 }
