@@ -22,25 +22,25 @@ function App() {
   return (
     <div>
       <StoreProvider>
-        <SafeAreaView style={[styles.container, { backgroundColor: '#e0c595' }]}>
-          <StatusBar barStyle="light-content" backgroundColor="#e0c595" />
-          <BrowserRouter>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/home/:pageName" component={Home} />
-              <Route path="/cookie" component={Cookie} />
-              <Route path="/cookie/:cookieStyle" component={Cookie} />
-              <Route path="/team" component={Team} />
-              <Route path="/number" component={Number} />
-              <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
-              <Route path="/profile" component={Profile} />
-              <Route path="/order/:orderId" component={Order} />
-              <Route path="/change" component={Change} />
-              <Route path="/event" component={Event} />
-            </Switch>
-          </BrowserRouter>
-        </SafeAreaView>
+        {/* <SafeAreaView style={[styles.container, { backgroundColor: '#e0c595' }]}>
+          <StatusBar barStyle="light-content" backgroundColor="#e0c595" /> */}
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/home/:pageName" component={Home} />
+            <Route path="/cookie" component={Cookie} />
+            <Route path="/cookie/:cookieStyle" component={Cookie} />
+            <Route path="/team" component={Team} />
+            <Route path="/number" component={Number} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/order/:orderId" component={Order} />
+            <Route path="/change" component={Change} />
+            <Route path="/event" component={Event} />
+          </Switch>
+        </BrowserRouter>
+        {/* </SafeAreaView> */}
       </StoreProvider >
     </div>
   );
