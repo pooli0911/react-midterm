@@ -1,22 +1,36 @@
 import { Link, useHistory } from "react-router-dom";
 import UserInfo from "./UserInfo"
-import { Badge } from "antd";
+import { Badge, notification } from "antd";
 import { StoreContext } from "../store"
 import { useState, useContext } from "react";
 import { requestComment,requestComment2 } from '../actions'
 
 
 export default function HeaderNavBar({ isOnTouch }) {
-    const { state: { cart: { cartItems }, count },dispatch } = useContext(StoreContext);
+    const { state: { cart: { cartItems }, count,userSignin: { userInfo} },dispatch } = useContext(StoreContext);
     const history = useHistory();
     const checkoutHandler = () => {
         history.push("/login?redirect=team");
+        openFull();
      }
      const checkoutEvent = () => {
         requestComment(dispatch);
         requestComment2(dispatch);
         history.push("/login?redirect=event");
+        openFull();
      }
+     const openFull = () => {
+        if (!(userInfo)) {
+        notification.open({
+            message: '請先登入！',
+            onClick: () => {
+                console.log('Notification Clicked!');
+            },
+            placement: 'bottomRight'
+        
+     });
+    }
+    };
     return (
         <>
             <div className={`header-text ${isOnTouch ? "" : "header-text-wrap"}`}>
