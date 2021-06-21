@@ -6,6 +6,7 @@ import issueImg3 from "../img/home_img/issue3.png"
 import issueImg4 from "../img/home_img/issue4.png"
 import NavBar from "./NavBar"
 import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 export default function Content() {
