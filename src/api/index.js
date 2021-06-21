@@ -114,12 +114,15 @@ export const feedCookies = () => {
   }
   export const createCommentApi = async (comment) =>{
     const commentRef=await allCommentsCollectionRef.doc();
+    let date = new Date().getTime();
+    const time= new Intl.DateTimeFormat( { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
     const id = commentRef.id;
     await commentRef.set({
       ...comment,
-      id
+      date,
+      time,
     });
-    return {...comment,id};
+    return {...comment};
   }
   export const getComment = async()=>{
     let jsonComments=[];
@@ -132,11 +135,14 @@ export const feedCookies = () => {
   export const createComment2Api = async (comment) =>{
     const commentRef=await allComments2CollectionRef.doc();
     const id = commentRef.id;
+    let date = new Date().getTime();
+    const time= new Intl.DateTimeFormat( { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
     await commentRef.set({
       ...comment,
-      id
+      date,
+      time,
     });
-    return {...comment,id};
+    return {...comment};
   }
   export const getComment2 = async()=>{
     let jsonComments=[];
