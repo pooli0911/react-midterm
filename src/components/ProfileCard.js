@@ -51,7 +51,7 @@ const ProfileCard = () => {
     history.push("/order/" + id);
     // history.push("/order/"+orderid[orderitem.indexOf(id)]);
   }
-  
+
 
   //  const addnum=() => {
   //    if(num<4){
@@ -78,7 +78,7 @@ const ProfileCard = () => {
       <div className="button-pos">
         <Button
           type="primary"
-          className="login-form__button prologin"
+          className="login-form__button prologin logout"
           onClick={handleLogout}
         >
           登出
@@ -107,8 +107,8 @@ const ProfileCard = () => {
 
               </div>
             )
-            
-           
+
+
 
           ) : (
             <div></div>
