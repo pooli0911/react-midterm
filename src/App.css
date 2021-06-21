@@ -1048,6 +1048,13 @@ body {
   margin-top:3%;
   margin-left:10%;
 }
+@media (max-width: 800px){
+  .imgtest{
+    width:25%;
+    /* margin-top:3%; */
+    margin-left:10%;
+  }
+}
 .input-flex{
   display:flex;
 }

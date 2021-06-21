@@ -170,8 +170,6 @@ export default function Event({ redirect }) {
 
             </div>
           </Form>
-
-
         </div>
         {/* <Table columns={columns} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} >
                 {commentitem.map(com =>(
