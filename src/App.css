@@ -1202,12 +1202,13 @@ body {
     display:block;
   }
   .nameId{
+    font-size: 17px;
     width:200px;
   }
   .imgtest{
     position:relative;
     margin-left:55%;
-    margin-top:-22%;
+    margin-top:-18%;
   }
  
 
@@ -1314,7 +1315,7 @@ body {
     width:100%;
   }
   .scroll-box{
-    height:650px;
+    height:600px;
   }
   .inputFlex{
     display:block;
@@ -1324,11 +1325,12 @@ body {
     display:block;
   }
   .nameId{
+    font-size: 14px;
     width:200px;
   }
   .imgtest{
     position:relative;
-    margin-top:5%;
+    margin-top:8%;
   }
   .ant-image{
     margin-left:40%;
