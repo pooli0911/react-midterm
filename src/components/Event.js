@@ -294,13 +294,13 @@ export default function Event({ redirect }) {
         <div className="scroll-box">
           {commentitem2.map(item => (
             <div className="inputBox">
-              
+
               <div className="inputFlex">
                 <div className="idFlex">
                   <div className="nameId">{item.name}</div>
                 </div>
                 <div className="screenFlex">
-                  <div className="nameId">{item.commentItems.ID}</div>
+                  <div className="nameId idd">{item.commentItems.ID}</div>
                 </div>
                 <div className="imgtest">
                   <Image className="eventImg" src={Event21} />
