@@ -2,9 +2,11 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import Cookiedetail from "../components/CookieDetail"
+import {getCookiesByStyle} from "../api"
 
 export default function sswiper({ cookies }) {
     const slides = [];
+    // const amount = getCookiesByStyle(cookies.style);
     for (let i = 0; i < 7; i++) {
         slides.push(
             <div>

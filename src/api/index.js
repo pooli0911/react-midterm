@@ -52,6 +52,18 @@ const firebaseConfig = {
     });
     return jsonProducts;
   }
+  export const getCookiesByStyle = async(style)=>{
+    const amount=0;
+    const collection = cookies.find(element => element.style === style);
+    let jsonProducts = [];
+    const querySnapshot = await allCookiesCollectionRef.where("style", "==", collection).get();
+    querySnapshot.forEach((doc) => {
+      jsonProducts.push(doc.data());
+      amount+=1;
+    });
+    return amount;
+
+  }
   
 export const feedCookies = () => {
     cookies.forEach((cookie) => {

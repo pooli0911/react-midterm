@@ -7,6 +7,8 @@ import { StoreContext } from "../store"
 import Spe01 from "../img/otherimg/spe01.jpg"
 import Spe02 from "../img/otherimg/spe02.jpg"
 import Spe03 from "../img/otherimg/spe03.jpg"
+import Event11 from "../img/otherimg/screenshot01-1.jpg"
+import Event21 from "../img/otherimg/screenshot02-1.jpg"
 import EventInfo from "../json/event.json"
 
 
@@ -179,7 +181,23 @@ export default function Event({ redirect }) {
                   </div>            
                 ))}
                 </Table> */}
-        <Table columns={columns} dataSource={data} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} />
+        {/* <Table columns={columns} dataSource={data} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} /> */}
+        <div className="scroll-box">
+        {commentitem.map(item=>(
+          <div className="inputBox">
+          <div className="input-flex">
+            <div className="idFlex">
+            <div className="nameId">{item.name}</div>
+            </div>
+            <div className="screenFlex">
+            <div className="nameId">{item.commentItems.ID}</div>
+            </div>
+            <img className="eventImg" src={Event11}/>
+          </div>
+          </div>
+        ))}
+        </div>
+        
       </div>
 
 
@@ -272,7 +290,22 @@ export default function Event({ redirect }) {
 
         </div>
 
-        <Table columns={columns} dataSource={data2} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} />
+        {/* <Table columns={columns} dataSource={data2} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} /> */}
+        <div className="scroll-box">
+        {commentitem2.map(item=>(
+          <div className="inputBox">
+          <div className="input-flex">
+            <div className="idFlex">
+            <div className="nameId">{item.name}</div>
+            </div>
+            <div className="screenFlex">
+            <div className="nameId">{item.commentItems.ID}</div>
+            </div>
+            <img className="eventImg" src={Event21}/>
+          </div>
+          </div>
+        ))}
+        </div>
       </div>
 
 
