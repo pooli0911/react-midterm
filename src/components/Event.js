@@ -183,7 +183,7 @@ export default function Event({ redirect }) {
         <div className="scroll-box">
           {commentitem.map(item => (
             <div className="inputBox">
-              <div className="input-flex">
+              <div className="inputFlex">
                 <div className="idFlex">
                   <div className="nameId">{item.name}</div>
                 </div>
@@ -294,7 +294,8 @@ export default function Event({ redirect }) {
         <div className="scroll-box">
           {commentitem2.map(item => (
             <div className="inputBox">
-              <div className="input-flex">
+              
+              <div className="inputFlex">
                 <div className="idFlex">
                   <div className="nameId">{item.name}</div>
                 </div>

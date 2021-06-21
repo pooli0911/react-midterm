@@ -1058,6 +1058,9 @@ body {
 .input-flex{
   display:flex;
 }
+.inputFlex{
+  display:flex;
+}
 .id-flex{
   display:flex;
   width:50%;
@@ -1191,6 +1194,23 @@ body {
   .input-flex{
     display:block;
   }
+  .inputFlex{
+    display:block;
+  }
+  .screenFlex{
+    width:35%;
+    display:block;
+  }
+  .nameId{
+    width:200px;
+  }
+  .imgtest{
+    position:relative;
+    margin-left:55%;
+    margin-top:-22%;
+  }
+ 
+
   .id-flex{
     width:100%;
   }
@@ -1292,6 +1312,37 @@ body {
   }
   .screen-flex{
     width:100%;
+  }
+  .scroll-box{
+    height:650px;
+  }
+  .inputFlex{
+    display:block;
+  }
+  .screenFlex{
+    width:100%;
+    display:block;
+  }
+  .nameId{
+    width:200px;
+  }
+  .imgtest{
+    position:relative;
+    margin-top:5%;
+  }
+  .ant-image{
+    margin-left:40%;
+  }
+  .idFlex{
+    width:50%;
+  }
+  .screenFlex{
+    width:50%;
+  }
+  .imgtest{
+    margin-left:0%;
+    width:20%;
+
   }
   .displayname{
     font-size: 18px;
