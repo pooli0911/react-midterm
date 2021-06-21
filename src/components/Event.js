@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Form, Input, Button, Checkbox, Upload, message, Table } from 'antd';
+import { Form, Input, Button, Checkbox, Upload, message, Table, Image } from 'antd';
 import { WarningOutlined, MailOutlined, LockOutlined, UploadOutlined } from '@ant-design/icons';
 import { loginToFirebase, createComment, requestComment, createComment2, requestComment2 } from '../actions'
 import { StoreContext } from "../store"
@@ -183,21 +183,23 @@ export default function Event({ redirect }) {
                 </Table> */}
         {/* <Table columns={columns} dataSource={data} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} /> */}
         <div className="scroll-box">
-        {commentitem.map(item=>(
-          <div className="inputBox">
-          <div className="input-flex">
-            <div className="idFlex">
-            <div className="nameId">{item.name}</div>
+          {commentitem.map(item => (
+            <div className="inputBox">
+              <div className="input-flex">
+                <div className="idFlex">
+                  <div className="nameId">{item.name}</div>
+                </div>
+                <div className="screenFlex">
+                  <div className="nameId">{item.commentItems.ID}</div>
+                </div>
+                <div className="imgtest">
+                  <Image width={200} className="eventImg" src={Event11} />
+                </div>
+              </div>
             </div>
-            <div className="screenFlex">
-            <div className="nameId">{item.commentItems.ID}</div>
-            </div>
-            <img className="eventImg" src={Event11}/>
-          </div>
-          </div>
-        ))}
+          ))}
         </div>
-        
+
       </div>
 
 
@@ -292,19 +294,21 @@ export default function Event({ redirect }) {
 
         {/* <Table columns={columns} dataSource={data2} pagination={{ pageSize: 700 }} scroll={{ y: 200 }} /> */}
         <div className="scroll-box">
-        {commentitem2.map(item=>(
-          <div className="inputBox">
-          <div className="input-flex">
-            <div className="idFlex">
-            <div className="nameId">{item.name}</div>
+          {commentitem2.map(item => (
+            <div className="inputBox">
+              <div className="input-flex">
+                <div className="idFlex">
+                  <div className="nameId">{item.name}</div>
+                </div>
+                <div className="screenFlex">
+                  <div className="nameId">{item.commentItems.ID}</div>
+                </div>
+                <div className="imgtest">
+                  <Image className="eventImg" src={Event21} />
+                </div>
+              </div>
             </div>
-            <div className="screenFlex">
-            <div className="nameId">{item.commentItems.ID}</div>
-            </div>
-            <img className="eventImg" src={Event21}/>
-          </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
 
